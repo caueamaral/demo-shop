@@ -1,0 +1,17 @@
+/* ----- estrutura ----- */
+body {
+  background: #f7f7f7;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+}
+
+.pagamento {
+  background :#fff;
+  border: 1px solid #ccc;
+  margin-top:65px;
+  padding:55px 65px;
+  width: 1024px;
+}
