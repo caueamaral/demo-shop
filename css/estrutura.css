@@ -39,7 +39,13 @@ html, body {
 }
 
 .info-titulo {
+  display: flex;
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
+}
+
+.info-titulo-vetor {
+  height: 40px;
+  margin-right: 11px;
 }
