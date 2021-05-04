@@ -23,13 +23,50 @@
   margin-top: 40px;
 }
 
-.form-campo {
+.form-campo,
+.form-selecao {
   border-bottom: 1px solid var(--cinza);
+}
+
+.form-campo {
   color: var(--preto);
   display: block;
   margin-top: 3px;
   padding: 3px 0;
   width: 100%;
+}
+
+.form-selecao {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.form-rotulo {
+  bottom: 4px;
+  color: var(--cinza);
+  display: block;
+  position: absolute;
+  transition: bottom .2s;
+  width: 100%;
+}
+
+.form-botao {
+  background: var(--vermelho);
+  border: none;
+  border-radius: 10px;
+  color: var(--branco);
+  cursor: pointer;
+  font-family: 'SF Pro Text';
+  letter-spacing:.1px;
+  margin-top: 45px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-font-smoothing: initial;
 }
 
 .form-cvv-rotulo {
@@ -54,44 +91,10 @@
   width: 15px;
 }
 
-.form-selecao {
-  background: transparent;
-  border: 1px solid #000;
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-
 .form-campo:focus + .form-rotulo,
 .form-campo:valid + .form-rotulo,
 .form-selecao:active + .form-rotulo,
 .form-selecao:valid + .form-rotulo {
   bottom: 24px;
   font-size: 13px;
-}
-
-.form-rotulo {
-  bottom: 4px;
-  color: var(--cinza);
-  display: block;
-  font-size: 17px;
-  line-height: 22px;
-  position: absolute;
-  transition: bottom .2s;
-  width: 100%;
-}
-
-.form-botao {
-  background: var(--vermelho);
-  border: none;
-  border-radius: 10px;
-  color: var(--branco);
-  cursor: pointer;
-  font-family: 'SF Pro Text';
-  letter-spacing:.1px;
-  margin-top: 45px;
-  padding: 15px 0;
-  text-transform: uppercase;
-  width: 100%;
-  -webkit-font-smoothing: initial;
 }
