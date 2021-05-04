@@ -32,6 +32,16 @@
   width: 100%;
 }
 
+.form-cvv-rotulo {
+  align-items: center;
+  display: flex;
+  width: inherit;
+}
+
+.form-cvv-info-campo {
+  margin-left: 10px;
+}
+
 .form-cvv-texto {
   margin-right: 10px;
 }
@@ -54,7 +64,7 @@
 
 .form-campo:focus + .form-rotulo,
 .form-campo:valid + .form-rotulo,
-.form-selecao:focus + .form-rotulo,
+.form-selecao:active + .form-rotulo,
 .form-selecao:valid + .form-rotulo {
   bottom: 24px;
   font-size: 13px;
@@ -69,16 +79,6 @@
   position: absolute;
   transition: bottom .2s;
   width: 100%;
-}
-
-.form-cvv-rotulo {
-  align-items: center;
-  display: flex;
-  width: inherit;
-}
-
-.form-cvv-info-campo {
-  margin-left: 10px;
 }
 
 .form-botao {
