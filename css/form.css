@@ -32,13 +32,31 @@
   width: 100%;
 }
 
+.form-campo-cvv-info {
+  background: var(--cinza);
+  border-radius: 50%;
+  color: var(--branco);
+  display: inline-block;
+  font-size: 12px;
+  height: 14px;
+  line-height: 14px;
+  margin-left: 4px;
+  text-align:center;
+  width: 14px;
+}
+
 .form-selecao {
+  background: transparent;
+  border: 1px solid #000;
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .form-campo:focus + .form-rotulo,
 .form-campo:valid + .form-rotulo,
-.form-selecao:focus + .form-rotulo {
+.form-selecao:focus + .form-rotulo,
+.form-selecao:valid + .form-rotulo {
   bottom: 24px;
   font-size: 13px;
 }
@@ -53,6 +71,17 @@
   transition: bottom .2s;
   width: 100%;
 }
+
+.form-rotulo-cvv {
+  align-items: center;
+  display: flex;
+  width: inherit;
+}
+
+.form-campo-cvv-info {
+  margin-left: 10px;
+}
+
 
 .form-botao {
   background: var(--vermelho);
