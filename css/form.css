@@ -82,14 +82,13 @@
   margin-left: 10px;
 }
 
-
 .form-botao {
   background: var(--vermelho);
   border: none;
   border-radius: 10px;
   color: var(--branco);
   cursor: pointer;
-  font-family: 'Pro Text';
+  font-family: 'SF Pro Text';
   letter-spacing:.1px;
   margin-top: 45px;
   padding: 15px 0;

@@ -12,9 +12,13 @@
 
 /* ----- fontes ----- */
 @font-face {
-  font-family:'Pro Text';
-  src: url('../font/pro-text-regular.ttf')
+  font-family:'SF Pro Text';
+  src: url('../font/sf-pro-text-regular.eot');
+  src: url('../font/sf-pro-text-regular.woff2') format('woff2'),
+       url('../font/sf-pro-text-regular.woff') format('woff'),
+       url('../font/sf-pro-text-regular.ttf') format('truetype');
 }
+
 
 
 /* ----- estrutura ----- */

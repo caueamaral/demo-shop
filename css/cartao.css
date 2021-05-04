@@ -1,7 +1,7 @@
 /* ----- cartao ----- */
 .cartao {
   background: url(../img/cartao-celular.png);
-  font-family: 'Pro Text';
+  font-family: 'SF Pro Text';
   height: 172px;
   margin-top: 15px;
   position: relative;
@@ -11,11 +11,11 @@
 
 .cartao-numeros {
   font-size: 19px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   line-height: 20px;
-  margin-top: 77px;
+  margin-top: 75px;
   text-align: center;
-  word-spacing: 2px;
+  word-spacing: 1px;
 }
 
 .cartao-nome,
