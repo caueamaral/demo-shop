@@ -1,6 +1,8 @@
 /* ----- cartao ----- */
 .cartao {
   background: url(../img/cartao-celular.png);
+  border-radius: 10px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
   font-family: 'SF Pro Text';
   height: 172px;
   margin-top: 15px;
