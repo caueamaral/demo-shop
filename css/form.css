@@ -5,6 +5,16 @@
   margin: 45px 40px 40px;
 }
 
+.form-linha-validade-e-cvv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-grupo-validade,
+.form-grupo-cvv {
+  width: calc(50% - 5px);
+}
+
 .form-linha:not(:first-of-type) {
   margin-top: 45px;
 }
