@@ -3,13 +3,33 @@
   background: url(../img/cartao-celular.png);
   height: 172px;
   margin-top: 15px;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
   width: 280px;
 }
 
 .cartao-numeros {
-  margin-top: 77px;
+  font-size: 19px;
   letter-spacing: 3px;
+  line-height: 20px;
+  margin-top: 77px;
   text-align: center;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
   word-spacing: 2px;
+}
+
+.cartao-nome,
+.cartao-validade {
+  bottom: 32px;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+}
+
+.cartao-nome {
+  left: 15px;
+  text-transform: uppercase;
+}
+
+.cartao-validade {
+  right: 15px;
 }
