@@ -21,24 +21,24 @@
           <form class="form">
             <div class="form-linha">
               <div class="form-grupo">
-                <label for="" class="form-rotulo">Número do cartão</label>
-                <input type="text" class="form-campo">
+                <input type="text" class="form-campo" id="form-campo-numero" required>
+                <label for="form-campo-numero" class="form-rotulo">Número do cartão</label>
               </div>
             </div>
             <div class="form-linha">
               <div class="form-grupo">
-                <label for="" class="form-rotulo">Nome (igual ao cartão)</label>
-                <input type="text" class="form-campo">
+                <input type="text" class="form-campo" id="form-campo-nome" required>
+                <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
               </div>
             </div>
             <div class="form-linha form-linha-validade-e-cvv">
               <div class="form-grupo form-grupo-validade">
-                <label for="" class="form-rotulo">Validade</label>
-                <input type="text" class="form-campo">
+                <input type="text" class="form-campo" id="form-campo-validade" required>
+                <label for="form-campo-validade" class="form-rotulo">Validade</label>
               </div>
               <div class="form-grupo form-grupo-cvv">
-                <label for="" class="form-rotulo">CVV</label>
-                <input type="text" class="form-campo">
+                <input type="text" class="form-campo" id="form-campo-cvv" required>
+                <label for="form-campo-cvv" class="form-rotulo">CVV</label>
               </div>
             </div>
             <input type="submit" value="Continuar" class="form-botao">

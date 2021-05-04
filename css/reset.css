@@ -4,5 +4,6 @@
   box-sizing: border-box;
   font: 17px/22px Verdana;
   margin: 0;
+  outline: 0;
 	padding: 0;
 }

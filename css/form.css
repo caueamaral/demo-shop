@@ -5,6 +5,10 @@
   margin: 45px 40px 40px;
 }
 
+.form-linha {
+  position:relative;
+}
+
 .form-linha-validade-e-cvv {
   display: flex;
   justify-content: space-between;
@@ -16,22 +20,32 @@
 }
 
 .form-linha:not(:first-of-type) {
-  margin-top: 45px;
-}
-
-.form-rotulo {
-  color: var(--cinza);
-  display: block;
-  font-size: 17px;
-  line-height: 22px;
-  width: 100%;
+  margin-top: 40px;
 }
 
 .form-campo {
   border-bottom: 1px solid var(--cinza);
+  color: var(--preto);
   display: block;
-  height: 0;
   margin-top: 3px;
+  padding: 3px 0;
+  width: 100%;
+}
+
+.form-campo:focus + .form-rotulo,
+.form-campo:valid + .form-rotulo {
+  bottom: 24px;
+  font-size: 13px;
+}
+
+.form-rotulo {
+  bottom: 4px;
+  color: var(--cinza);
+  display: block;
+  font-size: 17px;
+  line-height: 22px;
+  position: absolute;
+  transition: bottom .2s;
   width: 100%;
 }
 
