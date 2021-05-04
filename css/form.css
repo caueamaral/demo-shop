@@ -32,8 +32,13 @@
   width: 100%;
 }
 
+.form-selecao {
+  width: 100%;
+}
+
 .form-campo:focus + .form-rotulo,
-.form-campo:valid + .form-rotulo {
+.form-campo:valid + .form-rotulo,
+.form-selecao:focus + .form-rotulo {
   bottom: 24px;
   font-size: 13px;
 }
