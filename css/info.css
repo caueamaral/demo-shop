@@ -1,0 +1,57 @@
+/* ----- info ----- */
+.info {
+  align-items: center;
+  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 200px;
+  color: var(--branco);
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.info-etapas {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  line-height: 36px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.info-etapas-voltar {
+  left: 7px;
+  position:absolute;
+}
+
+.info-etapas-vetor {
+  fill: var(--branco);
+  height: 25px;
+}
+
+.info-etapas-destaque,
+.info-etapas-texto {
+  font-size: inherit;
+}
+
+.info-etapas-destaque {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.info-etapas-texto {
+  display: inline-block;
+}
+
+.info-titulo {
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  margin-top: 27px;
+}
+
+.info-titulo-vetor {
+  height: 40px;
+  margin-right: 11px;
+}
