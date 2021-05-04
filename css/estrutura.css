@@ -1,29 +1,32 @@
-/* ----- estrutura ----- */
-body {
-  background: #f7f7f7;
-}
-
-
-
 /* ----- cores ----- */
 :root {
+  --cinza: #c9c9c9;
+  --cinzaClaro: #efefef;
+  --cinzaFundo: #f7f7f7;
   --branco: #fff;
   --vermelho: #de4b4b;
-  --cinza: #c9c9c9;
 }
 
 
 
 /* ----- estrutura ----- */
+html, body {
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--cinzaFundo);
+  min-height:100vh;
+}
+
 .principal {
   display: flex;
-  font-family: Verdana;
   justify-content: center;
 }
 
 .pagamento {
   background: var(--branco);
-  border: 1px solid #ccc;
+  border: 1px solid var(--cinzaClaro);
   margin-top: 65px;
   width: 360px;
 }
