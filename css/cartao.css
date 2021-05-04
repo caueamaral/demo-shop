@@ -1,0 +1,7 @@
+/* ----- cartao ----- */
+.cartao {
+  background: url(../img/cartao-celular.png);
+  height: 172px;
+  margin-top: 15px;
+  width: 280px;
+}

@@ -52,13 +52,3 @@ html, body {
   height: 40px;
   margin-right: 11px;
 }
-
-
-
-/* ----- cartao ----- */
-.cartao {
-  background: url(../img/cartao-celular.png);
-  height: 172px;
-  margin-top: 15px;
-  width: 280px;
-}
