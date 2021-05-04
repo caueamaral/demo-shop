@@ -33,9 +33,12 @@ html, body {
 }
 
 .info {
-  background: var(--vermelho);
+  align-items: center;
+  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 200px;
   color: var(--branco);
-  padding: 55px 65px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
 .info-titulo {
@@ -48,4 +51,14 @@ html, body {
 .info-titulo-vetor {
   height: 40px;
   margin-right: 11px;
+}
+
+
+
+/* ----- cartao ----- */
+.cartao {
+  background: url(../img/cartao-celular.png);
+  height: 172px;
+  margin-top: 15px;
+  width: 280px;
 }
