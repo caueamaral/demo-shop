@@ -1,0 +1,28 @@
+/* ----- form ----- */
+.form {
+  font-size: 17px;
+  line-height: 22px;
+  margin: 45px 40px 40px;
+}
+
+.form-rotulo {
+  border: 1px solid #00d;
+  color: var(--cinza);
+  display: block;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.form-botao {
+  background: var(--vermelho);
+  border: none;
+  border-radius: 10px;
+  color: var(--branco);
+  cursor: pointer;
+  font:inherit;
+  letter-spacing:.1px;
+  margin-top: 45px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
