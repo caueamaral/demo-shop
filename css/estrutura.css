@@ -3,15 +3,50 @@ body {
   background: #f7f7f7;
 }
 
+
+
+/* ----- cores ----- */
+:root {
+  --branco: #fff;
+  --cinza: #c9c9c9;
+}
+
 .principal {
   display: flex;
+  font-family: Verdana;
   justify-content: center;
 }
 
 .pagamento {
-  background :#fff;
+  background: #fff;
   border: 1px solid #ccc;
-  margin-top:65px;
-  padding:55px 65px;
-  width: 1024px;
+  margin-top: 65px;
+  width: 360px;
+}
+
+.info {
+  background: #de4b4b;
+  color: #fff;
+  padding: 55px 65px;
+}
+
+.info-titulo {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+
+
+/* ----- form ----- */
+.form {
+  margin: 45px 40px 40px;
+}
+
+.form-rotulo {
+  border: 1px solid #00d;
+  color: var(--cinza);
+  display: block;
+  font-size: 17px;
+  line-height: 22px;
 }
