@@ -1,7 +1,7 @@
 /* ----- info ----- */
 .info {
   align-items: center;
-  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 200px;
+  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 242px;
   color: var(--branco);
   display: flex;
   flex-direction: column;

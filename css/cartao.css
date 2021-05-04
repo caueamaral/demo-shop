@@ -5,3 +5,11 @@
   margin-top: 15px;
   width: 280px;
 }
+
+.cartao-numeros {
+  margin-top: 77px;
+  letter-spacing: 3px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+  word-spacing: 2px;
+}
