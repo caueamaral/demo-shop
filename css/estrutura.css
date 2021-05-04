@@ -10,6 +10,13 @@
 
 
 
+/* ----- fontes ----- */
+@font-face {
+  font-family:'Pro Text';
+  src: url('../font/pro-text-regular.ttf')
+}
+
+
 /* ----- estrutura ----- */
 html, body {
   min-height: 100vh;

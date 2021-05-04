@@ -89,11 +89,11 @@
   border-radius: 10px;
   color: var(--branco);
   cursor: pointer;
-  font:inherit;
-  -webkit-font-smoothing: initial;
+  font-family: 'Pro Text';
   letter-spacing:.1px;
   margin-top: 45px;
   padding: 15px 0;
   text-transform: uppercase;
   width: 100%;
+  -webkit-font-smoothing: initial;
 }
