@@ -9,13 +9,13 @@
   position:relative;
 }
 
-.form-linha-validade-e-cvv {
+.form-validade-e-cvv-linha {
   display: flex;
   justify-content: space-between;
 }
 
-.form-grupo-validade,
-.form-grupo-cvv {
+.form-validade-grupo,
+.form-cvv-grupo{
   width: calc(50% - 5px);
 }
 
@@ -32,17 +32,16 @@
   width: 100%;
 }
 
-.form-campo-cvv-info {
-  background: var(--cinza);
-  border-radius: 50%;
-  color: var(--branco);
-  display: inline-block;
-  font-size: 12px;
-  height: 14px;
-  line-height: 14px;
-  margin-left: 4px;
-  text-align:center;
-  width: 14px;
+.form-cvv-texto {
+  margin-right: 10px;
+}
+
+.form-cvv-vetor {
+  bottom: 1px;
+  fill: var(--cinza);
+  height: 15px;
+  position: relative;
+  width: 15px;
 }
 
 .form-selecao {
@@ -72,13 +71,13 @@
   width: 100%;
 }
 
-.form-rotulo-cvv {
+.form-cvv-rotulo {
   align-items: center;
   display: flex;
   width: inherit;
 }
 
-.form-campo-cvv-info {
+.form-cvv-info-campo {
   margin-left: 10px;
 }
 
