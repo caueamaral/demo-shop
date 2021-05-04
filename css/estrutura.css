@@ -8,9 +8,13 @@ body {
 /* ----- cores ----- */
 :root {
   --branco: #fff;
+  --vermelho: #de4b4b;
   --cinza: #c9c9c9;
 }
 
+
+
+/* ----- estrutura ----- */
 .principal {
   display: flex;
   font-family: Verdana;
@@ -18,15 +22,15 @@ body {
 }
 
 .pagamento {
-  background: #fff;
+  background: var(--branco);
   border: 1px solid #ccc;
   margin-top: 65px;
   width: 360px;
 }
 
 .info {
-  background: #de4b4b;
-  color: #fff;
+  background: var(--vermelho);
+  color: var(--branco);
   padding: 55px 65px;
 }
 
@@ -40,6 +44,8 @@ body {
 
 /* ----- form ----- */
 .form {
+  font-size: 17px;
+  line-height: 22px;
   margin: 45px 40px 40px;
 }
 
@@ -49,4 +55,18 @@ body {
   display: block;
   font-size: 17px;
   line-height: 22px;
+}
+
+.form-botao {
+  background: var(--vermelho);
+  border: none;
+  border-radius: 10px;
+  color: var(--branco);
+  cursor: pointer;
+  font:inherit;
+  letter-spacing:.1px;
+  margin-top: 45px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 100%;
 }
