@@ -90,6 +90,7 @@
   color: var(--branco);
   cursor: pointer;
   font:inherit;
+  -webkit-font-smoothing: initial;
   letter-spacing:.1px;
   margin-top: 45px;
   padding: 15px 0;
