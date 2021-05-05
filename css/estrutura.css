@@ -39,7 +39,7 @@ html, body {
 .pagamento {
   background: var(--branco);
   border: 2px solid var(--cinzaClaro);
-  margin-top: 65px;
+  margin: 40px 0;
   width: 360px;
 }
 
@@ -47,6 +47,12 @@ html, body {
 
 /* ----- computador ----- */
 @media (min-width:1200px) {
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   .pagamento {
     display: flex;
     height: 594px;
