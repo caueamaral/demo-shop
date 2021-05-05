@@ -42,3 +42,10 @@ html, body {
   margin-top: 65px;
   width: 360px;
 }
+
+@media (min-width:1200px) {
+  .pagamento {
+    display: flex;
+    width: 1024px;
+  }
+}

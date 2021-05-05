@@ -55,3 +55,12 @@
   height: 40px;
   margin-right: 11px;
 }
+
+
+
+@media (min-width:1200px) {
+  .info {
+    border:1px solid #000;
+    width: 495px;
+  }
+}
