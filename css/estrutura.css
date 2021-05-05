@@ -46,7 +46,7 @@ html, body {
 
 
 /* ----- computador ----- */
-@media (min-width:1200px) {
+@media (min-width:1100px) {
   .container {
     align-items: center;
     display: flex;

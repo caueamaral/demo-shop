@@ -59,7 +59,7 @@
 
 
 /* ----- computador ----- */
-@media (min-width:1200px) {
+@media (min-width:1100px) {
   .info {
     align-items: flex-start;
     background-size:352px 100%;
