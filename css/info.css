@@ -1,11 +1,11 @@
 /* ----- info ----- */
 .info {
   align-items: center;
-  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 240px;
+  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 230px;
   color: var(--branco);
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 34px;
 }
 
 .info-etapas {
@@ -48,7 +48,7 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 20px;
-  margin-top: 27px;
+  margin-top: 24px;
 }
 
 .info-titulo-vetor {
