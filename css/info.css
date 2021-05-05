@@ -65,4 +65,13 @@
     background-size:352px 100%;
     padding-left: 65px;
   }
+
+  .info-titulo {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .info-titulo-vetor {
+    height: 50px;
+  }
 }
