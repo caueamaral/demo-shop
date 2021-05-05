@@ -52,6 +52,22 @@
   .cartao {
     background: url(../img/cartao-computador.png);
     height: 224px;
+    margin-top: 30px;
     width: 365px;
+  }
+
+  .cartao-nome,
+  .cartao-validade {
+    bottom: 38px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .cartao-nome{
+    left: 26px;
+  }
+
+  .cartao-validade {
+    right: 26px;
   }
 }
