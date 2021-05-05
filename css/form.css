@@ -40,14 +40,25 @@
   appearance: none;
   -webkit-appearance: none;
   background: transparent;
+  cursor: pointer;
+  padding-bottom: 3px;
   position: relative;
   width: 100%;
   z-index: 1;
 }
 
+.form-selecao-vetor {
+  fill: var(--vermelho);
+  position: absolute;
+  right: -6px;
+  top: -2px;
+  width: 30px;
+}
+
 .form-rotulo {
   bottom: 4px;
   color: var(--cinza);
+  cursor: pointer;
   display: block;
   position: absolute;
   transition: bottom .2s;
