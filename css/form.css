@@ -109,3 +109,23 @@
   bottom: 24px;
   font-size: 13px;
 }
+
+
+
+/* ----- computador ----- */
+@media (min-width:1200px) {
+  .form {
+    margin-right: 65px;
+  }
+
+  .form-linha:not(:first-of-type) {
+    margin-top: 60px;
+  }
+
+  .form-botao {
+    float: right;
+    padding-left: 72px;
+    padding-right: 72px;
+    width: auto;
+  }
+}

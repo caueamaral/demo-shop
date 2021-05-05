@@ -43,9 +43,14 @@ html, body {
   width: 360px;
 }
 
+
+
+/* ----- computador ----- */
 @media (min-width:1200px) {
   .pagamento {
     display: flex;
+    height: 594px;
+    justify-content: space-between;
     width: 1024px;
   }
 }

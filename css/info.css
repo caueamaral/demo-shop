@@ -58,9 +58,11 @@
 
 
 
+/* ----- computador ----- */
 @media (min-width:1200px) {
   .info {
-    border:1px solid #000;
-    width: 495px;
+    align-items: flex-start;
+    background-size:352px 100%;
+    padding-left: 65px;
   }
 }
