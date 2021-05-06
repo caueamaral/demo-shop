@@ -8,8 +8,29 @@
 /* ----- computador ----- */
 @media (min-width:1100px) {
   .etapas {
+    color: var(--vermelho);
     display: flex;
-    font-size: 13px;
+    justify-content: flex-end;
     margin-top: 10px;
+  }
+
+  .etapas-grupo {
+    font-size: 13px;
+  }
+
+  .etapas-grupo:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .etapas-grupo-numero {
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 22px;
+    margin-right: 2px;
+    text-align: center;
+    width: 22px;
   }
 }
