@@ -15,11 +15,12 @@
   }
 
   .etapas-grupo {
-    font-size: 13px;
+    align-items: center;
+    display: flex;
   }
 
   .etapas-grupo:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 16px;
   }
 
   .etapas-grupo-numero {
@@ -29,8 +30,19 @@
     font-size: 12px;
     font-weight: bold;
     height: 22px;
-    margin-right: 2px;
+    margin-right: 7px;
     text-align: center;
     width: 22px;
+  }
+
+  .etapas-grupo-texto {
+    font-size: 13px;
+    margin-right: 15px;
+  }
+
+  .etapas-grupo-vetor {
+    fill: var(--vermelho);
+    height: 20px;
+    width: 20px;
   }
 }
