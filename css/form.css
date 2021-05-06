@@ -104,9 +104,9 @@
 .form-cvv-vetor {
   bottom: 1px;
   fill: var(--cinza);
-  height: 15px;
+  height: 14px;
   position: relative;
-  width: 15px;
+  width: 14px;
 }
 
 .form-campo:focus + .form-rotulo,
