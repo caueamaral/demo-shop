@@ -9,13 +9,13 @@
   width: 280px;
 }
 
-.cartao-numeros,
-.cartao-nome,
-.cartao-validade {
+.cartao-frente-numeros,
+.cartao-frente-nome,
+.cartao-frente-validade {
   font-family: 'SF Pro Text';
 }
 
-.cartao-numeros {
+.cartao-frente-numeros {
   font-size: 19px;
   letter-spacing: 4px;
   line-height: 20px;
@@ -24,20 +24,20 @@
   word-spacing: 1px;
 }
 
-.cartao-nome,
-.cartao-validade {
+.cartao-frente-nome,
+.cartao-frente-validade {
   bottom: 30px;
   font-size: 12px;
   line-height: 15px;
   position: absolute;
 }
 
-.cartao-nome {
+.cartao-frente-nome {
   left: 15px;
   text-transform: uppercase;
 }
 
-.cartao-validade {
+.cartao-frente-validade {
   right: 15px;
 }
 
@@ -61,25 +61,25 @@
     width: 365px;
   }
 
-  .cartao-numeros {
+  .cartao-frente-numeros {
     font-size: 24px;
     line-height: 27px;
     margin-top: 105px;
     word-spacing: 8px;
   }
 
-  .cartao-nome,
-  .cartao-validade {
+  .cartao-frente-nome,
+  .cartao-frente-validade {
     bottom: 36px;
     font-size: 16px;
     line-height: 23px;
   }
 
-  .cartao-nome{
+  .cartao-frente-nome {
     left: 26px;
   }
 
-  .cartao-validade {
+  .cartao-frente-validade {
     right: 26px;
   }
 }
