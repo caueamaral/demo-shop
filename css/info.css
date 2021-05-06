@@ -67,7 +67,7 @@
   .info {
     align-items: flex-start;
     background-size:352px 100%;
-    padding: 45px 0 0 63px;
+    padding: 48px 0 0 63px;
   }
 
   .info-etapas {
@@ -97,6 +97,7 @@
   .info-titulo {
     font-size: 20px;
     line-height: 24px;
+    margin-top: 49px;
   }
 
   .info-titulo-vetor {
