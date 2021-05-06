@@ -34,9 +34,9 @@
             <section class="cartao">
               <div class="cartao-frente">
                 <div class="cartao-frente-pattern">**** **** **** ****</div>
-                <div class="cartao-frente-numeros cartao-numeros js-cartao-numeros"></div>
-                <div class="cartao-frente-nome">Nome do titular</div>
-                <div class="cartao-frente-validade">00/00</div>  
+                <div class="cartao-frente-numeros js-cartao-data-bind-alvo" data-bind="numero"></div>
+                <div class="cartao-frente-nome js-cartao-data-bind-alvo" data-bind="nome">Nome do titular</div>
+                <div class="cartao-frente-validade js-cartao-data-bind-alvo" data-bind="validade">00/00</div>  
               </div>
             </section>
           </section><!--- info -->
@@ -62,19 +62,19 @@
             <form class="form">
               <div class="form-linha form-linha-numero">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-campo-numero" id="form-campo-numero" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-numero" data-bind="numero" required>
                   <label for="form-campo-numero" class="form-rotulo">Número do cartão</label>
                 </div>
               </div>
               <div class="form-linha form-linha-nome">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-campo-nome" id="form-campo-nome" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-nome" data-bind="nome" required>
                   <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
                 </div>
               </div>
               <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
                 <div class="form-grupo form-cvv-grupo">
-                  <input type="text" class="form-campo js-cartao-campo-validade" id="form-campo-validade" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" required>
                   <label for="form-campo-validade" class="form-rotulo">Validade</label>
                 </div>
                 <div class="form-grupo form-linha-cvv form-cvv-grupo">
