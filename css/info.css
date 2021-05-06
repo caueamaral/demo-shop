@@ -43,6 +43,10 @@
   display: inline-block;
 }
 
+.info-etapas-texto-computador {
+  display: none;
+}
+
 .info-titulo {
   display: flex;
   font-size: 16px;
@@ -64,6 +68,30 @@
     align-items: flex-start;
     background-size:352px 100%;
     padding-left: 65px;
+  }
+
+  .info-etapas {
+    justify-content: flex-start;
+  }
+
+  .info-etapas-destaque,
+  .info-etapas-texto {
+    display: none;
+  }
+  
+  .info-etapas-texto-computador {
+    display: block;
+    font-size: 13px;
+  }
+
+  .info-etapas-voltar {
+    margin-right: 15px;
+    position: relative;
+    top: 2px;
+  }
+
+  .info-etapas-vetor {
+    height: 16px;
   }
 
   .info-titulo {
