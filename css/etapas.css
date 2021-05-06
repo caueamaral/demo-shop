@@ -1,0 +1,14 @@
+/* ----- etapas ----- */
+.etapas {
+  display: none;
+}
+
+
+
+/* ----- computador ----- */
+@media (min-width:1100px) {
+  .etapas {
+    display: block;
+    margin-top: 50px;
+  }
+}

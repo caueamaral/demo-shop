@@ -59,4 +59,9 @@ html, body {
     justify-content: space-between;
     width: 1024px;
   }
+
+  .dados {
+    margin-right: 65px;
+    width: 435px;
+  }
 }

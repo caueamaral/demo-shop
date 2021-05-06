@@ -115,8 +115,7 @@
 /* ----- computador ----- */
 @media (min-width:1100px) {
   .form {
-    margin-right: 65px;
-    width: 435px;
+    margin: 50px 0 0;
   }
 
   .form-linha:not(:first-of-type) {
