@@ -4,17 +4,28 @@
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
   height: 172px;
   margin-top: 15px;
+  overflow: hidden;
   position: relative;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
   width: 280px;
 }
 
+.cartao-frente {
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.cartao-frente-pattern,
 .cartao-frente-numeros,
 .cartao-frente-nome,
 .cartao-frente-validade {
   font-family: 'SF Pro Text';
 }
 
+.cartao-frente-pattern,
 .cartao-frente-numeros {
   font-size: 19px;
   letter-spacing: 4px;
@@ -61,6 +72,7 @@
     width: 365px;
   }
 
+  .cartao-frente-pattern,
   .cartao-frente-numeros {
     font-size: 24px;
     line-height: 27px;
