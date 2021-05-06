@@ -62,19 +62,19 @@
             <form class="form">
               <div class="form-linha form-linha-numero">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-numero" data-bind="numero" required>
+                  <input type="numbers" class="form-campo js-cartao-data-bind" id="form-campo-numero" data-bind="numero" maxlength="19" required>
                   <label for="form-campo-numero" class="form-rotulo">Número do cartão</label>
                 </div>
               </div>
               <div class="form-linha form-linha-nome">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-nome" data-bind="nome" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-nome" data-bind="nome" maxlength="40" required>
                   <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
                 </div>
               </div>
               <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
                 <div class="form-grupo form-cvv-grupo">
-                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" max-length="5" required>
                   <label for="form-campo-validade" class="form-rotulo">Validade</label>
                 </div>
                 <div class="form-grupo form-linha-cvv form-cvv-grupo">

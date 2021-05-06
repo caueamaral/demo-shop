@@ -58,6 +58,8 @@
 .cartao-frente-nome {
   left: 15px;
   text-transform: uppercase;
+  word-break: break-all;
+  width: 200px;
 }
 
 .cartao-frente-validade {
