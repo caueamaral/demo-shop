@@ -27,12 +27,22 @@
 
 .cartao-frente-pattern,
 .cartao-frente-numeros {
-  font-size: 19px;
-  letter-spacing: 4px;
   line-height: 20px;
-  margin-top: 80px;
-  text-align: center;
-  word-spacing: 1px;
+  position: absolute;
+  top: 80px;
+  word-spacing: 2px;
+}
+
+.cartao-frente-pattern {
+  font-size: 19px;
+  left: 16px;
+  letter-spacing: 4px;
+}
+
+.cartao-frente-numeros {
+  font-size: 19px;
+  left: 15px;
+  letter-spacing: 2px;
 }
 
 .cartao-frente-nome,
@@ -76,7 +86,7 @@
   .cartao-frente-numeros {
     font-size: 24px;
     line-height: 27px;
-    margin-top: 105px;
+    top: 105px;
     word-spacing: 8px;
   }
 
