@@ -28,7 +28,7 @@ html, body {
 
 .container {
   background: var(--cinzaFundo);
-  min-height:100vh;
+  min-height: 100vh;
 }
 
 .principal {
@@ -59,13 +59,12 @@ html, body {
 
   .pagamento {
     display: flex;
-    height: 594px;
     justify-content: space-between;
     width: 1024px;
   }
 
   .dados {
-    margin-right: 63px;
+    margin: 48px 63px 48px 0;
     width: 440px;
   }
 }

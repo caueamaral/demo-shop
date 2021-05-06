@@ -12,8 +12,8 @@ menu, nav, output, section, summary {
 	border: 0;
   box-sizing: border-box;
   font: 17px/22px Verdana;
-  -webkit-font-smoothing: antialiased;
   margin: 0;
   outline: 0;
 	padding: 0;
+  -webkit-font-smoothing: antialiased;
 }

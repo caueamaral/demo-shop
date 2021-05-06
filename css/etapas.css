@@ -20,7 +20,7 @@
   }
 
   .etapas-grupo:not(:last-child) {
-    margin-right: 16px;
+    margin-right: 18px;
   }
 
   .etapas-grupo-numero {
@@ -39,7 +39,7 @@
   .etapas-grupo-numero.ativo::after {
     background: var(--vermelho) url(../img/etapas-grupo-numero-ativo.svg) no-repeat center / 13px auto;
     border-radius: 50%;
-    content:'';
+    content: '';
     left: 0;
     height: 100%;
     position: absolute;
@@ -52,7 +52,7 @@
   }
 
   .etapas-grupo:not(:last-of-type) .etapas-grupo-texto {
-    margin-right: 15px;
+    margin-right: 17px;
   }
 
   .etapas-grupo-vetor {

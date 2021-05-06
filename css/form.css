@@ -5,7 +5,7 @@
 }
 
 .form-linha {
-  position:relative;
+  position: relative;
 }
 
 .form-validade-e-cvv-linha {
@@ -14,7 +14,7 @@
 }
 
 .form-validade-grupo,
-.form-cvv-grupo{
+.form-cvv-grupo {
   width: calc(50% - 5px);
 }
 
@@ -79,7 +79,7 @@
   color: var(--branco);
   cursor: pointer;
   font-family: 'SF Pro Text';
-  letter-spacing:.1px;
+  letter-spacing: .2px;
   margin-top: 45px;
   padding: 15px 0;
   text-transform: uppercase;
@@ -122,15 +122,24 @@
 /* ----- computador ----- */
 @media (min-width:1100px) {
   .form {
-    margin: 50px 0 0;
+    margin: 68px 0 0;
   }
 
-  .form-linha:not(:first-of-type) {
-    margin-top: 60px;
+  .form-linha-nome {
+    margin-top: 58px;
+  }
+
+  .form-linha-validade {
+    margin-top: 55px;
+  }
+
+  .form-linha-parcelas {
+    margin-top: 61px;
   }
 
   .form-botao {
     float: right;
+    margin-top: 60px;
     padding-left: 72px;
     padding-right: 72px;
     width: auto;

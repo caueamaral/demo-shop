@@ -21,7 +21,7 @@
 
 .info-etapas-voltar {
   left: 7px;
-  position:absolute;
+  position: absolute;
 }
 
 .info-etapas-vetor {
@@ -66,7 +66,7 @@
 @media (min-width:1100px) {
   .info {
     align-items: flex-start;
-    background-size:352px 100%;
+    background-size: 352px 100%;
     padding: 48px 0 0 63px;
   }
 
