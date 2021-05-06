@@ -17,28 +17,28 @@
 
 .cartao-numeros {
   font-size: 19px;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   line-height: 20px;
-  margin-top: 82px;
+  margin-top: 80px;
   text-align: center;
   word-spacing: 1px;
 }
 
 .cartao-nome,
 .cartao-validade {
-  bottom: 32px;
+  bottom: 30px;
   font-size: 12px;
   line-height: 15px;
   position: absolute;
 }
 
 .cartao-nome {
-  left: 14px;
+  left: 15px;
   text-transform: uppercase;
 }
 
 .cartao-validade {
-  right: 14px;
+  right: 15px;
 }
 
 
@@ -63,7 +63,6 @@
 
   .cartao-numeros {
     font-size: 24px;
-    letter-spacing: 4px;
     line-height: 27px;
     margin-top: 105px;
     word-spacing: 8px;
