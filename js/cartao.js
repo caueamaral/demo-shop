@@ -1,9 +1,9 @@
 ;(() => {
   const cartaoNumero = () => {
-    const $campoNumero = document.querySelector('.js-cartao-numero')
+    const $campoNumero = document.querySelector('.js-cartao-campo-numero')
   
     $campoNumero.addEventListener('input', () => {
-      console.log(event.currentTarget.value)
+      document.querySelector('.js-cartao-numeros').textContent = event.currentTarget.value
     })
   }
   

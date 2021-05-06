@@ -34,7 +34,7 @@
             <section class="cartao">
               <div class="cartao-frente">
                 <div class="cartao-frente-pattern">**** **** **** ****</div>
-                <div class="cartao-frente-numeros">0000 0000</div>
+                <div class="cartao-frente-numeros cartao-numeros js-cartao-numeros"></div>
                 <div class="cartao-frente-nome">Nome do titular</div>
                 <div class="cartao-frente-validade">00/00</div>  
               </div>
@@ -62,23 +62,23 @@
             <form class="form">
               <div class="form-linha form-linha-numero">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-numero" id="form-campo-numero" required>
+                  <input type="text" class="form-campo js-cartao-campo-numero" id="form-campo-numero" required>
                   <label for="form-campo-numero" class="form-rotulo">Número do cartão</label>
                 </div>
               </div>
               <div class="form-linha form-linha-nome">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-nome" id="form-campo-nome" required>
+                  <input type="text" class="form-campo js-cartao-campo-nome" id="form-campo-nome" required>
                   <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
                 </div>
               </div>
               <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
                 <div class="form-grupo form-cvv-grupo">
-                  <input type="text" class="form-campo js-cartao-validade" id="form-campo-validade" required>
+                  <input type="text" class="form-campo js-cartao-campo-validade" id="form-campo-validade" required>
                   <label for="form-campo-validade" class="form-rotulo">Validade</label>
                 </div>
                 <div class="form-grupo form-linha-cvv form-cvv-grupo">
-                  <input type="text" class="form-campo js-cartao-cvv" id="form-cvv-campo" required>
+                  <input type="text" class="form-campo js-cartao-campo-cvv" id="form-cvv-campo" required>
                   <label for="form-cvv-campo" class="form-rotulo form-cvv-rotulo">
                     <span class="form-cvv-texto">CVV</span>
                     <svg class="form-cvv-vetor" height="92px" id="Capa_1" style="enable-background:new 0 0 92 92;" version="1.1" viewBox="0 0 92 92" width="92px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M45.385,0.004C19.983,0.344-0.333,21.215,0.004,46.619c0.34,25.393,21.209,45.715,46.611,45.377   c25.398-0.342,45.719-21.213,45.381-46.615C91.656,19.986,70.785-0.335,45.385,0.004z M50.484,15.333   c4.676,0,6.057,2.714,6.057,5.815c0,3.877-3.104,7.461-8.396,7.461c-4.43,0-6.537-2.229-6.414-5.91   C41.731,19.597,44.33,15.333,50.484,15.333z M38.497,74.75c-3.195,0-5.537-1.938-3.301-10.467l3.666-15.125   c0.637-2.424,0.744-3.393,0-3.393c-0.959,0-5.107,1.674-7.557,3.322l-1.598-2.617c7.773-6.491,16.712-10.299,20.544-10.299   c3.195,0,3.727,3.779,2.131,9.594l-4.199,15.9c-0.744,2.811-0.424,3.779,0.318,3.779c0.961,0,4.102-1.166,7.188-3.59l1.811,2.424   C49.939,71.838,41.69,74.75,38.497,74.75z"/></g><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/><g/></svg>

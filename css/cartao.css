@@ -40,6 +40,8 @@
 }
 
 .cartao-frente-numeros {
+  background-repeat: no-repeat;
+  background-position: -15px -80px;
   font-size: 19px;
   left: 15px;
   letter-spacing: 2px;
@@ -66,8 +68,9 @@
 
 /* ----- celular ----- */
 @media (max-width:1099px) {
-  .cartao {
-    background: url(../img/cartao-celular.png);
+  .cartao,
+  .cartao-frente-numeros {
+    background-image: url(../img/cartao-celular.png);
   }
 }
 
@@ -76,10 +79,13 @@
 /* ----- computador ----- */
 @media (min-width:1100px) {
   .cartao {
-    background: url(../img/cartao-computador.png);
     height: 224px;
-    margin-top: 30px;
     width: 365px;
+  }
+
+  .cartao,
+  .cartao-frente-numeros {
+    background-image: url(../img/cartao-computador.png);
   }
 
   .cartao-frente-pattern,
@@ -94,6 +100,7 @@
     word-spacing: 7px;
   }
   .cartao-frente-numeros {
+    background-position: -26px -105px;
     left: 26px;
     word-spacing: 5px;
   }
