@@ -41,7 +41,7 @@
 /* ----- celular ----- */
 @media (max-width:1099px) {
   .cartao {
-    background: url(../img/cartao-computador.png);
+    background: url(../img/cartao-celular.png);
   }
 }
 
