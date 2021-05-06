@@ -11,7 +11,6 @@
     color: var(--vermelho);
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
   }
 
   .etapas-grupo {
@@ -50,6 +49,9 @@
 
   .etapas-grupo-texto {
     font-size: 13px;
+  }
+
+  .etapas-grupo:not(:last-of-type) .etapas-grupo-texto {
     margin-right: 15px;
   }
 
