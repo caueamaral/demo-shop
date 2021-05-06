@@ -18,8 +18,16 @@
   width: calc(50% - 5px);
 }
 
-.form-linha:not(:first-of-type) {
-  margin-top: 40px;
+.form-linha-nome {
+  margin-top: 38px;
+}
+
+.form-linha-validade {
+  margin-top: 35px;
+}
+
+.form-linha-parcelas {
+  margin-top: 41px;
 }
 
 .form-campo,

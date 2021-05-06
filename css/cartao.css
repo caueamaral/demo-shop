@@ -14,7 +14,7 @@
   font-size: 19px;
   letter-spacing: 2px;
   line-height: 20px;
-  margin-top: 75px;
+  margin-top: 82px;
   text-align: center;
   word-spacing: 1px;
 }
@@ -28,12 +28,12 @@
 }
 
 .cartao-nome {
-  left: 15px;
+  left: 13px;
   text-transform: uppercase;
 }
 
 .cartao-validade {
-  right: 15px;
+  right: 13px;
 }
 
 
