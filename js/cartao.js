@@ -30,9 +30,7 @@
   const cartaoValidar = () => {
     const $campos = document.querySelectorAll('.js-cartao-data-bind')
 
-    $campos.forEach($campo => {
-      $campo.addEventListener('blur', () => validar(event))
-    })
+    $campos.forEach($campo => $campo.addEventListener('blur', () => validar(event)))
   }
 
   cartaoPreencher()
@@ -124,11 +122,25 @@ const validar = valor => {
   if (alvo == 'numero') {
     validarNumero()
   }
+  else if (alvo == 'nome') {
+    validarNome()
+  }
 
   function validarNumero() {
     const $grupo = event.target.closest('.js-form-grupo')
 
     if (event.target.value.length == 19) {
+      $grupo.classList.remove('invalido')
+    }
+    else {
+      $grupo.classList.add('invalido')
+    }
+  }
+
+  function validarNome() {
+    const $grupo = event.target.closest('.js-form-grupo')
+
+    if (event.target.value.length > 4 && event.target.value.includes(' ')) {
       $grupo.classList.remove('invalido')
     }
     else {
