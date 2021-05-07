@@ -38,6 +38,9 @@
                 <div class="cartao-frente-nome js-cartao-data-bind-alvo" data-bind="nome" placeholder="Nome do titular">Nome do titular</div>
                 <div class="cartao-frente-validade js-cartao-data-bind-alvo" data-bind="validade" placeholder="00/00">00/00</div>
               </div>
+              <div class="cartao-verso">
+                <div class="cartao-verso-cvv">000</div>
+              </div>
             </section>
           </section><!--- info -->
 
@@ -68,7 +71,7 @@
               </div>
               <div class="form-linha form-linha-nome">
                 <div class="form-grupo">
-                  <input type="text" class="form-campo js-cartao-data-bind js-cartao-campo-nome" id="form-campo-nome" data-bind="nome" maxlength="40" required>
+                  <input type="text" class="form-campo js-cartao-data-bind js-cartao-campo-nome" id="form-campo-nome" data-bind="nome" maxlength="26" required>
                   <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
                 </div>
               </div>
