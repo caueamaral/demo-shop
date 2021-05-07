@@ -123,6 +123,14 @@
   position: absolute;
 }
 
+.form-grupo.invalido .form-campo {
+  border-color: var(--vermelho);
+}
+
+.form-grupo.invalido .form-mensagem {
+  display: block;
+}
+
 
 
 /* ----- computador ----- */

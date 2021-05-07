@@ -66,26 +66,26 @@
   
             <form class="form" autocomplete="off" autocomplete="chrome-off">
               <div class="form-linha form-linha-numero">
-                <div class="form-grupo">
+                <div class="form-grupo js-form-grupo">
                   <input type="numbers" class="form-campo js-cartao-data-bind" id="form-campo-numero" data-bind="numero" maxlength="19" required>
                   <label for="form-campo-numero" class="form-rotulo">Número do cartão</label>
                   <div class="form-mensagem">Número de cartão inválido</div>
                 </div>
               </div>
               <div class="form-linha form-linha-nome">
-                <div class="form-grupo">
+                <div class="form-grupo js-form-grupo">
                   <input type="text" class="form-campo js-cartao-data-bind js-cartao-campo-nome" id="form-campo-nome" data-bind="nome" maxlength="26" required>
                   <label for="form-campo-nome" class="form-rotulo">Nome (igual ao cartão)</label>
                   <div class="form-mensagem">Insira seu nome completo</div>
                 </div>
               </div>
               <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
-                <div class="form-grupo form-cvv-grupo">
+                <div class="form-grupo form-cvv-grupo js-form-grupo">
                   <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" maxlength="5" required>
                   <label for="form-campo-validade" class="form-rotulo">Validade</label>
                   <div class="form-mensagem">Data inválida</div>
                 </div>
-                <div class="form-grupo form-linha-cvv form-cvv-grupo">
+                <div class="form-grupo form-linha-cvv form-cvv-grupo js-form-grupo">
                   <input type="text" class="form-campo js-cartao-data-bind js-cartao-campo-cvv" id="form-cvv-campo" data-bind="cvv" maxlength="3" required>
                   <label for="form-cvv-campo" class="form-rotulo form-cvv-rotulo">
                     <span class="form-cvv-texto">CVV</span>
@@ -95,7 +95,7 @@
                 </div>
               </div>
               <div class="form-linha form-linha-parcelas">
-                <div class="form-grupo">
+                <div class="form-grupo js-form-grupo">
                   <select class="form-selecao" id="form-selecao-parcelas" required>
                     <option value=""></option>
                     <option value="1">1x R$ 12.000,00 sem juros</option>

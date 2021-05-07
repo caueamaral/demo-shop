@@ -119,10 +119,20 @@ const inserirBarra = valor => {
 }
 
 const validar = valor => {
-  const alvo  = event.target.dataset.bind
-  const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
+  const alvo = event.target.dataset.bind
 
   if (alvo == 'numero') {
-    console.log('numero')
+    validarNumero()
+  }
+
+  function validarNumero() {
+    const $grupo = event.target.closest('.js-form-grupo')
+
+    if (event.target.value.length == 19) {
+      $grupo.classList.remove('invalido')
+    }
+    else {
+      $grupo.classList.add('invalido')
+    }
   }
 }
