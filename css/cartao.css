@@ -26,7 +26,15 @@
   z-index: 1;
 }
 
-.cartao:hover .cartao-frente {
+.cartao-verso {
+  transform: perspective(600px) rotateY(180deg) scale(.5);
+}
+
+.cartao.flip .cartao-verso {
+  transform: perspective(600px) rotateY(0) scale(1);
+}
+
+.cartao.flip .cartao-frente {
   transform: perspective(600px) rotateY(-180deg);
 }
 
@@ -69,14 +77,6 @@
 
 .cartao-frente-validade {
   right: 15px;
-}
-
-.cartao-verso {
-  transform: perspective(600px) rotateY(180deg) scale(.5);
-}
-
-.cartao:hover .cartao-verso {
-  transform: perspective(600px) rotateY(0) scale(1);
 }
 
 .cartao-verso-cvv {

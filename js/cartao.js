@@ -6,40 +6,6 @@
       $campo.addEventListener('input', () => formatar(event))
       $campo.addEventListener('input', () => preencher(event))
     })
-
-    const formatar = () => {
-      const alvo           = event.target.dataset.bind
-      const valorSemLetras = removerLetras(event.target.value)
-
-      if (alvo == 'nome') {
-        event.target.value = removerNumeros(event.target.value)
-      }
-      else if (alvo == 'numero') {
-        event.target.value = inserirEspacos(valorSemLetras)
-      }
-      else if (alvo == 'validade') {
-        event.target.value = inserirBarra(valorSemLetras)
-      }
-    }
-
-    const preencher = () => {
-      const alvo  = event.target.dataset.bind
-      const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
-      let valor   = event.target.value
-
-      if (alvo == 'numero') {
-        valor = inserirEspacos(valor)
-      }
-      else if (alvo == 'validade') {
-        valor = inserirBarra(valor)
-      }
-
-      $alvo.textContent = valor
-
-      if (!$alvo.textContent) {
-        $alvo.textContent = $alvo.getAttribute('placeholder')
-      }
-    }
   }
 
   const cartaoAparar = () => {
@@ -50,10 +16,48 @@
     })
   }
 
+  const cartaoFlip = () => {
+    console.log('flip')
+  }
+
   cartaoPreencher()
   cartaoAparar()
+  cartaoFlip()
 })()
 
+const formatar = () => {
+  const alvo           = event.target.dataset.bind
+  const valorSemLetras = removerLetras(event.target.value)
+
+  if (alvo == 'nome') {
+    event.target.value = removerNumeros(event.target.value)
+  }
+  else if (alvo == 'numero') {
+    event.target.value = inserirEspacos(valorSemLetras)
+  }
+  else if (alvo == 'validade') {
+    event.target.value = inserirBarra(valorSemLetras)
+  }
+}
+
+const preencher = () => {
+  const alvo  = event.target.dataset.bind
+  const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
+  let valor   = event.target.value
+
+  if (alvo == 'numero') {
+    valor = inserirEspacos(valor)
+  }
+  else if (alvo == 'validade') {
+    valor = inserirBarra(valor)
+  }
+
+  $alvo.textContent = valor
+
+  if (!$alvo.textContent) {
+    $alvo.textContent = $alvo.getAttribute('placeholder')
+  }
+}
 
 const inserirEspacos = valor => {
   let novoValor = valor
