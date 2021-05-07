@@ -80,6 +80,7 @@
   }
 
   .info-etapas-voltar {
+    left: -4px;
     margin-right: 15px;
     position: relative;
     top: 2px;
