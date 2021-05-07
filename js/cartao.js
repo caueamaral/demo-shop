@@ -38,12 +38,13 @@
 })()
 
 
-const formatarEspacos = alvo => {
-  return alvo
+const formatarEspacos = valor => {
+  let novoValor = valor
+    .replace(/\s/g, '')
+    .replace(/(.{4})/g, '$1 ')
     .trim()
-    .replace(/(\/)/, '')
-    .replace(/(\d{4})/g, '$1 ')
-    .trim()
+
+  return novoValor
 }
 
 const formatarBarra = valor => {
