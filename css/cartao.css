@@ -23,6 +23,7 @@
 
 .cartao-frente {
   transform: perspective(600px) rotateY(0);
+  z-index: 1;
 }
 
 .cartao:hover .cartao-frente {
@@ -71,18 +72,26 @@
 }
 
 .cartao-verso {
-  transform: perspective(600px) rotateY(180deg);
+  transform: perspective(600px) rotateY(180deg) scale(.5);
 }
 
 .cartao:hover .cartao-verso {
-  transform: perspective(600px) rotateY(0);
+  transform: perspective(600px) rotateY(0) scale(1);
 }
 
-/* .cartao-verso-cvv {
-  left: 135px;
+.cartao-verso-cvv {
+  align-items: center;
+  color: var(--preto);
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 2px;
+  justify-content: center;
+  left: 129px;
+  height: 18px;
   position: absolute;
-  top: 80px;
-} */
+  top: 83px;
+  width: 45px;
+}
 
 
 
@@ -110,6 +119,10 @@
   .cartao-frente,
   .cartao-frente-numeros {
     background-image: url(../img/cartao-frente-computador.png);
+  }
+
+  .cartao-verso {
+    background-image: url(../img/cartao-verso-computador.png);
   }
 
   .cartao-frente-pattern-numeros,
@@ -144,7 +157,12 @@
     right: 26px;
   }
 
-  .cartao-verso {
-    background-image: url(../img/cartao-verso-computador.png);
+  .cartao-verso-cvv {
+    font-size: 15px;
+    letter-spacing: 3px;
+    left: 168px;
+    height: 24px;
+    top: 108px;
+    width: 60px;
   }
 }
