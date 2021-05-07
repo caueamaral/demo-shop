@@ -25,11 +25,6 @@
   transform: perspective(600px) rotateY(0);
 }
 
-.cartao-verso {
-  background: #00f;
-  transform: perspective(600px) rotateY(180deg);
-}
-
 .cartao:hover .cartao-frente {
   transform: perspective(600px) rotateY(-180deg);
 }
@@ -38,9 +33,6 @@
   transform: perspective(600px) rotateY(0);
 }
 
-
-
-/* ----- cartao-frente ----- */
 .cartao-frente-pattern-numeros,
 .cartao-frente-numeros {
   line-height: 20px;
@@ -82,13 +74,21 @@
   right: 15px;
 }
 
+.cartao-verso {
+  transform: perspective(600px) rotateY(180deg);
+}
+
 
 
 /* ----- celular ----- */
 @media (max-width:1099px) {
   .cartao-frente,
   .cartao-frente-numeros {
-    background-image: url(../img/cartao-celular.png);
+    background-image: url(../img/cartao-frente-celular.png);
+  }
+
+  .cartao-verso {
+    background-image: url(../img/cartao-verso-celular.png);
   }
 }
 
@@ -103,7 +103,7 @@
 
   .cartao-frente,
   .cartao-frente-numeros {
-    background-image: url(../img/cartao-computador.png);
+    background-image: url(../img/cartao-frente-computador.png);
   }
 
   .cartao-frente-pattern-numeros,
@@ -136,5 +136,9 @@
 
   .cartao-frente-validade {
     right: 26px;
+  }
+
+  .cartao-verso {
+    background-image: url(../img/cartao-verso-computador.png);
   }
 }
