@@ -27,9 +27,18 @@
     $campoCVV.addEventListener('blur', flipInativo)
   }
 
+  const cartaoValidar = () => {
+    const $campos = document.querySelectorAll('.js-cartao-data-bind')
+
+    $campos.forEach($campo => {
+      $campo.addEventListener('blur', () => validar(event))
+    })
+  }
+
   cartaoPreencher()
   cartaoAparar()
   cartaoFlip()
+  cartaoValidar()
 })()
 
 const formatar = () => {
@@ -107,4 +116,13 @@ const inserirBarra = valor => {
   }
 
   return novoValor
+}
+
+const validar = valor => {
+  const alvo  = event.target.dataset.bind
+  const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
+
+  if (alvo == 'numero') {
+    console.log('numero')
+  }
 }

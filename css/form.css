@@ -116,6 +116,13 @@
   font-size: 13px;
 }
 
+.form-mensagem {
+  color: var(--vermelho);
+  display: none;
+  font-size: 13px;
+  position: absolute;
+}
+
 
 
 /* ----- computador ----- */
