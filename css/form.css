@@ -119,7 +119,7 @@
 .form-mensagem {
   color: var(--vermelho);
   display: none;
-  font-size: 13px;
+  font-size: 11px;
   position: absolute;
 }
 
@@ -157,5 +157,9 @@
     padding-left: 72px;
     padding-right: 72px;
     width: auto;
+  }
+
+  .form-mensagem {
+    font-size: 13px;
   }
 }
