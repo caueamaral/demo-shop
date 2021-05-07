@@ -26,10 +26,10 @@
       const alvo = event.target.dataset.bind
 
       if (alvo == 'numero') {
-        event.target.value = formatarEspacos(event.target.value.trim())
+        event.target.value = formatarEspacos(event.target.value)
       }
       else if (alvo == 'validade') {
-        event.target.value = formatarBarra(event.target.value.trim())
+        event.target.value = formatarBarra(event.target.value)
       }
     }
   }
@@ -40,15 +40,20 @@
 
 const formatarEspacos = alvo => {
   return alvo
+    .trim()
     .replace(/(\/)/, '')
     .replace(/(\d{4})/g, '$1 ')
     .trim()
 }
 
 const formatarBarra = alvo => {
+  alvo = alvo.trim()
 
-  if (alvo.length > 2 && !alvo.includes('/')) {
+  if (!alvo.includes('/') && alvo.length > 2) {
     alvo = alvo.replace(/(\d{2})/, '$1/')
+  }
+  else if (alvo.includes('/') && alvo.length == 3) {
+    alvo = alvo.replace(/\//, '')
   }
 
   return alvo
