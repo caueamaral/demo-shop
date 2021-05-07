@@ -84,7 +84,7 @@
   color: var(--preto);
   display: flex;
   font-size: 12px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   justify-content: center;
   left: 129px;
   height: 18px;
@@ -93,6 +93,9 @@
   width: 45px;
 }
 
+.cartao-verso-cvv-interno {
+  margin-top: 4px;
+}
 
 
 /* ----- celular ----- */

@@ -65,7 +65,13 @@ const preencher = () => {
   $alvo.textContent = valor
 
   if (!$alvo.textContent) {
-    $alvo.textContent = $alvo.getAttribute('placeholder')
+
+    if (alvo == 'cvv') {
+      $alvo.innerHTML = `<span class="cartao-verso-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
+    }
+    else {
+      $alvo.textContent = $alvo.getAttribute('placeholder')
+    }
   }
 }
 
