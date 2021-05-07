@@ -128,6 +128,9 @@ const validar = valor => {
   else if (alvo == 'validade') {
     validarValidade()
   }
+  else if (alvo == 'cvv') {
+    validarCVV()
+  }
 
   function validarNumero() {
     const $grupo = event.target.closest('.js-form-grupo')
@@ -155,6 +158,17 @@ const validar = valor => {
     const $grupo = event.target.closest('.js-form-grupo')
 
     if (event.target.value.length == 5) {
+      $grupo.classList.remove('invalido')
+    }
+    else {
+      $grupo.classList.add('invalido')
+    }
+  }
+
+  function validarCVV() {
+    const $grupo = event.target.closest('.js-form-grupo')
+
+    if (event.target.value.length == 3) {
       $grupo.classList.remove('invalido')
     }
     else {
