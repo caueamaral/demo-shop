@@ -11,9 +11,14 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, section, summary {
 	border: 0;
   box-sizing: border-box;
-  font: 17px/22px Verdana;
   margin: 0;
   outline: 0;
 	padding: 0;
   -webkit-font-smoothing: antialiased;
+}
+
+html,
+input,
+select {
+  font: 17px/22px Verdana;
 }
