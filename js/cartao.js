@@ -20,6 +20,10 @@
       }
 
       $alvo.textContent = valor
+
+      if (!$alvo.textContent) {
+        $alvo.textContent = $alvo.getAttribute('placeholder')
+      }
     }
 
     const formatar = () => {
