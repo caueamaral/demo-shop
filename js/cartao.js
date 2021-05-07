@@ -11,7 +11,10 @@
       const alvo           = event.target.dataset.bind
       const valorSemLetras = removerLetras(event.target.value)
 
-      if (alvo == 'numero') {
+      if (alvo == 'nome') {
+        event.target.value = removerNumeros(event.target.value)
+      }
+      else if (alvo == 'numero') {
         event.target.value = inserirEspacos(valorSemLetras)
       }
       else if (alvo == 'validade') {
@@ -54,6 +57,12 @@ const inserirEspacos = valor => {
 
 const removerLetras = valor => {
   let novoValor = valor.replace(/\D/g, '')
+
+  return novoValor
+}
+
+const removerNumeros = valor => {
+  let novoValor = valor.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ')
 
   return novoValor
 }
