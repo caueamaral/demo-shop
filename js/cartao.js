@@ -63,15 +63,16 @@ const preencher = () => {
   let valor   = event.target.value
 
   if (alvo == 'numero') {
-    valor = inserirEspacos(valor)
+    $alvo.textContent = inserirEspacos(valor)
   }
   else if (alvo == 'validade') {
-    valor = inserirBarra(valor)
+    $alvo.textContent = inserirBarra(valor)
+  }
+  else if (alvo == 'nome' || alvo == 'cvv') {
+    $alvo.textContent = valor
   }
 
-  $alvo.textContent = valor
-
-  if (!$alvo.textContent) {
+  if (alvo != 'parcelas' && !$alvo?.textContent) {
 
     if (alvo == 'cvv') {
       $alvo.innerHTML = `<span class="cartao-verso-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
@@ -131,6 +132,9 @@ const validar = valor => {
   else if (alvo == 'cvv') {
     validarCVV()
   }
+  else if (alvo == 'parcelas') {
+    validarParcelas()
+  }
 
   function validarNumero() {
     const $grupo = event.target.closest('.js-form-grupo')
@@ -169,6 +173,17 @@ const validar = valor => {
     const $grupo = event.target.closest('.js-form-grupo')
 
     if (event.target.value.length == 3) {
+      $grupo.classList.remove('invalido')
+    }
+    else {
+      $grupo.classList.add('invalido')
+    }
+  }
+
+  function validarParcelas() {
+    const $grupo = event.target.closest('.js-form-grupo')
+
+    if (event.target.value) {
       $grupo.classList.remove('invalido')
     }
     else {
