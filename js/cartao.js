@@ -42,7 +42,16 @@
     }
   }
 
+  const cartaoAparar = () => {
+    const $campoNome = document.querySelector('.js-cartao-campo-nome')
+
+    $campoNome.addEventListener('blur', () => {
+      event.target.value = event.target.value.trim()
+    })
+  }
+
   cartaoPreencher()
+  cartaoAparar()
 })()
 
 
