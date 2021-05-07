@@ -33,10 +33,10 @@
             </h1>
             <section class="cartao">
               <div class="cartao-frente">
-                <div class="cartao-frente-pattern">**** **** **** ****</div>
+                <div class="cartao-frente-pattern-numeros">**** **** **** ****</div>
                 <div class="cartao-frente-numeros js-cartao-data-bind-alvo" data-bind="numero"></div>
                 <div class="cartao-frente-nome js-cartao-data-bind-alvo" data-bind="nome">Nome do titular</div>
-                <div class="cartao-frente-validade js-cartao-data-bind-alvo" data-bind="validade">00/00</div>  
+                <div class="cartao-frente-validade js-cartao-data-bind-alvo" data-bind="validade">00/00</div>
               </div>
             </section>
           </section><!--- info -->
@@ -59,7 +59,7 @@
               </div>
             </div><!-- dados -->
   
-            <form class="form" autocomplete="off">
+            <form class="form" autocomplete="off" autocomplete="chrome-off">
               <div class="form-linha form-linha-numero">
                 <div class="form-grupo">
                   <input type="numbers" class="form-campo js-cartao-data-bind" id="form-campo-numero" data-bind="numero" maxlength="19" required>
@@ -74,7 +74,7 @@
               </div>
               <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
                 <div class="form-grupo form-cvv-grupo">
-                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" max-length="5" required>
+                  <input type="text" class="form-campo js-cartao-data-bind" id="form-campo-validade" data-bind="validade" maxlength="5" required>
                   <label for="form-campo-validade" class="form-rotulo">Validade</label>
                 </div>
                 <div class="form-grupo form-linha-cvv form-cvv-grupo">

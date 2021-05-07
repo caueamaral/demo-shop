@@ -25,6 +25,11 @@
       if (alvo == 'numero') {
         event.target.value = formatarEspacos(event.target.value.trim())
       }
+      else if (alvo == 'validade') {
+        console.log(event.target.value)
+
+        event.target.value = formatarBarra(event.target.value.trim())
+      }
     }
   }
 
@@ -34,7 +39,14 @@
 
 const formatarEspacos = alvo => {
   return alvo
-    .replace(/ +/g, '')
+    .replace(/(\/)/, '')
     .replace(/(\d{4})/g, '$1 ')
+    .trim()
+}
+
+const formatarBarra = alvo => {
+  return alvo
+    .replace(/\//, '')
+    .replace(/(\d{2})/, '$1/')
     .trim()
 }

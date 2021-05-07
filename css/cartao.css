@@ -18,14 +18,14 @@
   width: 100%;
 }
 
-.cartao-frente-pattern,
+.cartao-frente-pattern-numeros,
 .cartao-frente-numeros,
 .cartao-frente-nome,
 .cartao-frente-validade {
   font-family: 'SF Pro Text';
 }
 
-.cartao-frente-pattern,
+.cartao-frente-pattern-numeros,
 .cartao-frente-numeros {
   line-height: 20px;
   position: absolute;
@@ -33,7 +33,7 @@
   word-spacing: 2px;
 }
 
-.cartao-frente-pattern {
+.cartao-frente-pattern-numeros {
   font-size: 19px;
   left: 16px;
   letter-spacing: 4px;
@@ -90,14 +90,14 @@
     background-image: url(../img/cartao-computador.png);
   }
 
-  .cartao-frente-pattern,
+  .cartao-frente-pattern-numeros,
   .cartao-frente-numeros {
     font-size: 24px;
     line-height: 27px;
     top: 105px;
   }
 
-  .cartao-frente-pattern {
+  .cartao-frente-pattern-numeros {
     left: 30px;
     word-spacing: 7px;
   }
