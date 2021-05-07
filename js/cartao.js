@@ -46,15 +46,15 @@ const formatarEspacos = alvo => {
     .trim()
 }
 
-const formatarBarra = alvo => {
-  alvo = alvo.trim()
+const formatarBarra = valor => {
+  let novoValor = valor.trim()
 
-  if (!alvo.includes('/') && alvo.length > 2) {
-    alvo = alvo.replace(/(\d{2})/, '$1/')
+  if (!novoValor.includes('/') && novoValor.length > 2) {
+    novoValor = novoValor.replace(/(\d{2})/, '$1/')
   }
-  else if (alvo.includes('/') && alvo.length == 3) {
-    alvo = alvo.replace(/\//, '')
+  else if (novoValor.includes('/') && novoValor.length == 3) {
+    novoValor = novoValor.replace(/\//, '')
   }
 
-  return alvo
+  return novoValor
 }
