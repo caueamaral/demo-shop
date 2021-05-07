@@ -43,17 +43,25 @@ const formatar = () => {
   const alvo           = event.target.dataset.bind
   const valorSemLetras = removerLetras(event.target.value)
 
-  if (alvo == 'numero') {
-    event.target.value = inserirEspacos(valorSemLetras)
+  let valor
+
+  switch(alvo) {
+    case 'numero':
+      valor = inserirEspacos(valorSemLetras)
+    break
+    case 'nome':
+      valor = removerNumeros(event.target.value)
+    break
+    case 'validade':
+      valor = inserirBarra(valorSemLetras)
+    break
+    case 'cvv':
+      valor = valorSemLetras
+    break
   }
-  else if (alvo == 'nome') {
-    event.target.value = removerNumeros(event.target.value)
-  }
-  else if (alvo == 'validade') {
-    event.target.value = inserirBarra(valorSemLetras)
-  }
-  else if (alvo == 'cvv') {
-    event.target.value = valorSemLetras
+
+  if (alvo != 'parcelas') {
+    event.target.value = valor
   }
 }
 
