@@ -17,7 +17,14 @@
   }
 
   const cartaoFlip = () => {
-    console.log('flip')
+    const $cartao   = document.querySelector('.js-cartao')
+    const $campoCVV = document.querySelector('.js-cartao-campo-cvv')
+
+    const flipAtivo   = () => $cartao.classList.add('flip')
+    const flipInativo = () => $cartao.classList.remove('flip')
+
+    $campoCVV.addEventListener('focus', flipAtivo)
+    $campoCVV.addEventListener('blur', flipInativo)
   }
 
   cartaoPreencher()
@@ -29,14 +36,17 @@ const formatar = () => {
   const alvo           = event.target.dataset.bind
   const valorSemLetras = removerLetras(event.target.value)
 
-  if (alvo == 'nome') {
-    event.target.value = removerNumeros(event.target.value)
-  }
-  else if (alvo == 'numero') {
+  if (alvo == 'numero') {
     event.target.value = inserirEspacos(valorSemLetras)
+  }
+  else if (alvo == 'nome') {
+    event.target.value = removerNumeros(event.target.value)
   }
   else if (alvo == 'validade') {
     event.target.value = inserirBarra(valorSemLetras)
+  }
+  else if (alvo == 'cvv') {
+    event.target.value = valorSemLetras
   }
 }
 
