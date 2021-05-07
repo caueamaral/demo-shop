@@ -29,10 +29,6 @@
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.cartao:hover .cartao-verso {
-  transform: perspective(600px) rotateY(0);
-}
-
 .cartao-frente-pattern-numeros,
 .cartao-frente-numeros {
   line-height: 20px;
@@ -77,6 +73,16 @@
 .cartao-verso {
   transform: perspective(600px) rotateY(180deg);
 }
+
+.cartao:hover .cartao-verso {
+  transform: perspective(600px) rotateY(0);
+}
+
+/* .cartao-verso-cvv {
+  left: 135px;
+  position: absolute;
+  top: 80px;
+} */
 
 
 
