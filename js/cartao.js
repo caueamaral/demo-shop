@@ -8,13 +8,14 @@
     })
 
     const formatar = () => {
-      const alvo = event.target.dataset.bind
+      const alvo           = event.target.dataset.bind
+      const valorSemLetras = removerLetras(event.target.value)
 
       if (alvo == 'numero') {
-        event.target.value = formatarEspacos(event.target.value)
+        event.target.value = inserirEspacos(valorSemLetras)
       }
       else if (alvo == 'validade') {
-        event.target.value = formatarBarra(event.target.value)
+        event.target.value = inserirBarra(valorSemLetras)
       }
     }
 
@@ -24,10 +25,10 @@
       let valor   = event.target.value
 
       if (alvo == 'numero') {
-        valor = formatarEspacos(valor)
+        valor = inserirEspacos(valor)
       }
       else if (alvo == 'validade') {
-        valor = formatarBarra(valor)
+        valor = inserirBarra(valor)
       }
 
       $alvo.textContent = valor
@@ -42,7 +43,7 @@
 })()
 
 
-const formatarEspacos = valor => {
+const inserirEspacos = valor => {
   let novoValor = valor
     .replace(/\s/g, '')
     .replace(/(.{4})/g, '$1 ')
@@ -51,7 +52,13 @@ const formatarEspacos = valor => {
   return novoValor
 }
 
-const formatarBarra = valor => {
+const removerLetras = valor => {
+  let novoValor = valor.replace(/\D/g, '')
+
+  return novoValor
+}
+
+const inserirBarra = valor => {
   let novoValor = valor.trim()
 
   if (!novoValor.includes('/') && novoValor.length > 2) {
