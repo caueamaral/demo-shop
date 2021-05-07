@@ -11,7 +11,8 @@
   width: 280px;
 }
 
-.cartao-frente {
+.cartao-frente,
+.cartao-verso {
   left: 0;
   height: 100%;
   position: absolute;
@@ -19,6 +20,9 @@
   width: 100%;
 }
 
+
+
+/* ----- cartao-frente ----- */
 .cartao-frente-pattern-numeros,
 .cartao-frente-numeros {
   line-height: 20px;
@@ -62,9 +66,16 @@
 
 
 
+/* ----- cartao-verso ----- */
+.cartao-verso {
+  
+}
+
+
+
 /* ----- celular ----- */
 @media (max-width:1099px) {
-  .cartao,
+  .cartao-frente,
   .cartao-frente-numeros {
     background-image: url(../img/cartao-celular.png);
   }
@@ -79,7 +90,7 @@
     width: 365px;
   }
 
-  .cartao,
+  .cartao-frente,
   .cartao-frente-numeros {
     background-image: url(../img/cartao-computador.png);
   }
