@@ -3,12 +3,23 @@
     const $campos = document.querySelectorAll('.js-cartao-data-bind')
 
     $campos.forEach($campo => {
-      $campo.addEventListener('input', () => preencher(event))
       $campo.addEventListener('input', () => formatar(event))
+      $campo.addEventListener('input', () => preencher(event))
     })
 
+    const formatar = () => {
+      const alvo = event.target.dataset.bind
+
+      if (alvo == 'numero') {
+        event.target.value = formatarEspacos(event.target.value)
+      }
+      else if (alvo == 'validade') {
+        event.target.value = formatarBarra(event.target.value)
+      }
+    }
+
     const preencher = () => {
-      const alvo  = event.target.dataset.bind        
+      const alvo  = event.target.dataset.bind
       const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
       let valor   = event.target.value
 
@@ -23,17 +34,6 @@
 
       if (!$alvo.textContent) {
         $alvo.textContent = $alvo.getAttribute('placeholder')
-      }
-    }
-
-    const formatar = () => {
-      const alvo = event.target.dataset.bind
-
-      if (alvo == 'numero') {
-        event.target.value = formatarEspacos(event.target.value)
-      }
-      else if (alvo == 'validade') {
-        event.target.value = formatarBarra(event.target.value)
       }
     }
   }
