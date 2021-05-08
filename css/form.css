@@ -32,7 +32,7 @@
 
 .form-campo,
 .form-selecao {
-  border-bottom: 1px solid var(--cinza);
+  border-bottom: 2px solid var(--cinzaClaro);
 }
 
 .form-campo {
