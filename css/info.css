@@ -38,7 +38,7 @@
   display: inline-block;
 }
 
-.info-steps-text-computador {
+.info-steps-text-computer {
   display: none;
 }
 
@@ -74,7 +74,7 @@
     display: none;
   }
   
-  .info-steps-text-computador {
+  .info-steps-text-computer {
     display: block;
     font-size: 13px;
   }
