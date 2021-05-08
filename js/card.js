@@ -1,36 +1,36 @@
 ;(() => {
   const cardPreencher = () => {
-    const $campos = document.querySelectorAll('.js-card-data-bind')
+    const $fields = document.querySelectorAll('.js-card-data-bind')
 
-    $campos.forEach($campo => {
-      $campo.addEventListener('input', () => formatar(event))
-      $campo.addEventListener('input', () => preencher(event))
+    $fields.forEach($field => {
+      $field.addEventListener('input', () => formatar(event))
+      $field.addEventListener('input', () => preencher(event))
     })
   }
 
   const cardAparar = () => {
-    const $campoNome = document.querySelector('.js-card-campo-nome')
+    const $fieldNome = document.querySelector('.js-card-field-nome')
 
-    $campoNome.addEventListener('blur', () => {
+    $fieldNome.addEventListener('blur', () => {
       event.target.value = event.target.value.trim()
     })
   }
 
   const cardFlip = () => {
     const $card   = document.querySelector('.js-card')
-    const $campoCVV = document.querySelector('.js-card-campo-cvv')
+    const $fieldCVV = document.querySelector('.js-card-field-cvv')
 
     const flipAtivo   = () => $card.classList.add('flip')
     const flipInativo = () => $card.classList.remove('flip')
 
-    $campoCVV.addEventListener('focus', flipAtivo)
-    $campoCVV.addEventListener('blur', flipInativo)
+    $fieldCVV.addEventListener('focus', flipAtivo)
+    $fieldCVV.addEventListener('blur', flipInativo)
   }
 
-  const cardValidarCampos = () => {
-    const $campos = document.querySelectorAll('.js-card-data-bind')
+  const cardValidarfields = () => {
+    const $fields = document.querySelectorAll('.js-card-data-bind')
 
-    $campos.forEach($campo => $campo.addEventListener('input', () => validar(event)))
+    $fields.forEach($field => $field.addEventListener('input', () => validar(event)))
   }
 
   const cardValidarEnvio = () => {
@@ -48,7 +48,7 @@
   }
 
   const cardBandeiras = () => {
-    const $numeros = document.querySelector('.js-form-campo-numero')
+    const $numeros = document.querySelector('.js-form-field-numero')
 
     $numeros.addEventListener('input', () => {
       validarBandeira()
@@ -58,7 +58,7 @@
   cardPreencher()
   cardAparar()
   cardFlip()
-  cardValidarCampos()
+  cardValidarfields()
   cardValidarEnvio()
   cardBandeiras()
 })()
@@ -186,7 +186,7 @@ const validar = valor => {
 }
 
 const validarNumero = () => {
-  const $numero = document.querySelector('.js-form-campo-numero')
+  const $numero = document.querySelector('.js-form-field-numero')
   const $grupo  = $numero.closest('.js-form-grupo')
 
   if ($numero.value.length == 19) {
@@ -198,7 +198,7 @@ const validarNumero = () => {
 }
 
 const validarNome = () => {
-  const $nome     = document.querySelector('.js-form-campo-nome')
+  const $nome     = document.querySelector('.js-form-field-nome')
   const $grupo    = $nome.closest('.js-form-grupo')
   const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
 
@@ -211,7 +211,7 @@ const validarNome = () => {
 }
 
 const validarValidade = () => {
-  const $validade = document.querySelector('.js-form-campo-validade')
+  const $validade = document.querySelector('.js-form-field-validade')
   const $grupo    = $validade.closest('.js-form-grupo')
 
   if ($validade.value.length == 5) {
@@ -223,7 +223,7 @@ const validarValidade = () => {
 }
 
 const validarCVV = () => {
-  const $cvv   = document.querySelector('.js-form-campo-cvv')
+  const $cvv   = document.querySelector('.js-form-field-cvv')
   const $grupo = $cvv.closest('.js-form-grupo')
 
   if ($cvv.value.length > 2) {

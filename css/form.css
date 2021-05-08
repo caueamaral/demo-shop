@@ -30,18 +30,18 @@
   margin-top: 41px;
 }
 
-.form-campo,
+.form-field,
 .form-selecao {
   border-bottom: 2px solid var(--cinzaClaro);
   transition: border-color .5s;
 }
 
-.form-grupo.invalido .form-campo,
+.form-grupo.invalido .form-field,
 .form-grupo.invalido .form-selecao {
   border-color: var(--vermelho);
 }
 
-.form-campo {
+.form-field {
   color: var(--preto);
   display: block;
   margin-top: 3px;
@@ -98,7 +98,7 @@
   width: inherit;
 }
 
-.form-cvv-info-campo {
+.form-cvv-info-field {
   margin-left: 10px;
 }
 
@@ -114,8 +114,8 @@
   width: 14px;
 }
 
-.form-campo:focus + .form-rotulo,
-.form-campo:valid + .form-rotulo,
+.form-field:focus + .form-rotulo,
+.form-field:valid + .form-rotulo,
 .form-selecao:active + .form-rotulo,
 .form-selecao:valid + .form-rotulo {
   bottom: 28px;
