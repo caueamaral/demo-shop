@@ -4,11 +4,11 @@
   line-height: 22px;
 }
 
-.form-linha {
+.form-row {
   position: relative;
 }
 
-.form-validity-e-cvv-linha {
+.form-validity-e-cvv-row {
   display: flex;
   justify-content: space-between;
 }
@@ -18,15 +18,15 @@
   width: calc(50% - 5px);
 }
 
-.form-linha-name {
+.form-row-name {
   margin-top: 38px;
 }
 
-.form-linha-validity {
+.form-row-validity {
   margin-top: 35px;
 }
 
-.form-linha-parcelas {
+.form-row-parcelas {
   margin-top: 41px;
 }
 
@@ -144,15 +144,15 @@
     margin: 68px 0 0;
   }
 
-  .form-linha-name {
+  .form-row-name {
     margin-top: 58px;
   }
 
-  .form-linha-validity {
+  .form-row-validity {
     margin-top: 55px;
   }
 
-  .form-linha-parcelas {
+  .form-row-parcelas {
     margin-top: 61px;
   }
 
