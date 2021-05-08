@@ -1,0 +1,158 @@
+/* ----- card ----- */
+.card {
+  font-family: 'SF Pro Text';
+  height: 172px;
+  margin-top: 15px;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  width: 280px;
+}
+
+.card-front,
+.card-verso {
+  background-size: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
+  left: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform .5s linear;
+  width: 100%;
+}
+
+.card-front {
+  background-image: url(../img/card-front.png);
+  transform: perspective(600px) rotateY(0);
+  z-index: 1;
+}
+
+.card.visa .card-front {
+  background-image: url(../img/card-front-visa.png);
+}
+
+.card.mastercard .card-front {
+  background-image: url(../img/card-front-mastercard.png);
+}
+
+.card-verso {
+  background-image: url(../img/card-verso.png);
+  transform: perspective(600px) rotateY(180deg) scale(.5);
+}
+
+.card.visa .card-verso {
+  background-image: url(../img/card-verso-visa.png);
+}
+
+.card.mastercard .card-verso {
+  background-image: url(../img/card-verso-mastercard.png);
+}
+
+
+.card.flip .card-verso {
+  transform: perspective(600px) rotateY(0) scale(1);
+}
+
+.card.flip .card-front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card-front-numeros {
+  font-size: 19px;
+  left: 15px;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 80px;
+  word-spacing: 5px;
+}
+
+.card-front-numeros-interno {
+  letter-spacing: 4px;
+  word-spacing: 3px;
+}
+
+.card-front-nome,
+.card-front-validade {
+  bottom: 30px;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+}
+
+.card-front-nome {
+  left: 15px;
+  text-transform: uppercase;
+  word-break: break-all;
+  width: 200px;
+}
+
+.card-front-validade {
+  right: 15px;
+}
+
+.card-verso-cvv {
+  align-items: center;
+  color: var(--preto);
+  display: flex;
+  font-size: 12px;
+  letter-spacing: 2px;
+  justify-content: center;
+  left: 130px;
+  height: 18px;
+  position: absolute;
+  top: 83px;
+  width: 45px;
+}
+
+.card-verso-cvv-interno {
+  margin-top: 4px;
+}
+
+
+
+/* ----- computador ----- */
+@media (min-width:1100px) {
+  .card {
+    height: 224px;
+    margin-top: 30px;
+    width: 365px;
+  }
+
+  .card-front-numeros {
+    font-size: 24px;
+    letter-spacing: 3px;
+    left: 26px;
+    top: 105px;
+    word-spacing: 2px;
+  }
+
+  .card-front-numeros-interno {
+    letter-spacing: 5px;
+    word-spacing: 3px;
+  }
+
+  .card-front-nome,
+  .card-front-validade {
+    bottom: 36px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+
+  .card-front-nome {
+    left: 26px;
+  }
+
+  .card-front-validade {
+    right: 26px;
+  }
+
+  .card-verso-cvv {
+    font-size: 15px;
+    letter-spacing: 3px;
+    left: 168px;
+    height: 24px;
+    top: 108px;
+    width: 60px;
+  }
+}
