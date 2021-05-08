@@ -27,16 +27,31 @@
     $campoCVV.addEventListener('blur', flipInativo)
   }
 
-  const cartaoValidar = () => {
+  const cartaoValidarCampos = () => {
     const $campos = document.querySelectorAll('.js-cartao-data-bind')
 
     $campos.forEach($campo => $campo.addEventListener('input', () => validar(event)))
   }
 
+  const cartaoValidarEnvio = () => {
+    const $botao = document.querySelector('.js-form-botao')
+
+    $botao.addEventListener('click', () => {
+      event.preventDefault()
+  
+      validarNumero()
+      validarNome()
+      validarValidade()
+      validarCVV()
+      validarParcelas()
+    })
+  }
+
   cartaoPreencher()
   cartaoAparar()
   cartaoFlip()
-  cartaoValidar()
+  cartaoValidarCampos()
+  cartaoValidarEnvio()
 })()
 
 const formatar = () => {
@@ -150,67 +165,71 @@ const validar = valor => {
       validarValidade()
     break
     case 'cvv':
-      validadeCVV()
+      validarCVV()
     break
     case 'parcelas':
-      validadeParcelas()
+      validarParcelas()
     break
   }
+}
 
-  function validarNumero() {
-    const $grupo = event.target.closest('.js-form-grupo')
+const validarNumero = () => {
+  const $numero = document.querySelector('.js-form-campo-numero')
+  const $grupo  = $numero.closest('.js-form-grupo')
 
-    if (event.target.value.length == 19) {
-      $grupo.classList.remove('invalido')
-    }
-    else {
-      $grupo.classList.add('invalido')
-    }
+  if ($numero.value.length == 19) {
+    $grupo.classList.remove('invalido')
   }
-
-  function validarNome() {
-    const $grupo    = event.target.closest('.js-form-grupo')
-    const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
-    const valor     = event.target.value
-
-    if (expressao.test(valor)) {
-      $grupo.classList.remove('invalido')
-    }
-    else {
-      $grupo.classList.add('invalido')
-    }
+  else {
+    $grupo.classList.add('invalido')
   }
+}
 
-  function validarValidade() {
-    const $grupo = event.target.closest('.js-form-grupo')
+const validarNome = () => {
+  const $nome     = document.querySelector('.js-form-campo-nome')
+  const $grupo    = $nome.closest('.js-form-grupo')
+  const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
 
-    if (event.target.value.length == 5) {
-      $grupo.classList.remove('invalido')
-    }
-    else {
-      $grupo.classList.add('invalido')
-    }
+  if (expressao.test($nome.value)) {
+    $grupo.classList.remove('invalido')
   }
-
-  function validarCVV() {
-    const $grupo = event.target.closest('.js-form-grupo')
-
-    if (event.target.value.length == 3) {
-      $grupo.classList.remove('invalido')
-    }
-    else {
-      $grupo.classList.add('invalido')
-    }
+  else {
+    $grupo.classList.add('invalido')
   }
+}
 
-  function validarParcelas() {
-    const $grupo = event.target.closest('.js-form-grupo')
+const validarValidade = () => {
+  const $validade = document.querySelector('.js-form-campo-validade')
+  const $grupo    = $validade.closest('.js-form-grupo')
 
-    if (event.target.value) {
-      $grupo.classList.remove('invalido')
-    }
-    else {
-      $grupo.classList.add('invalido')
-    }
+  if ($validade.value.length == 5) {
+    $grupo.classList.remove('invalido')
+  }
+  else {
+    $grupo.classList.add('invalido')
+  }
+}
+
+const validarCVV = () => {
+  const $cvv   = document.querySelector('.js-form-campo-cvv')
+  const $grupo = $cvv.closest('.js-form-grupo')
+
+  if ($cvv.value.length == 3) {
+    $grupo.classList.remove('invalido')
+  }
+  else {
+    $grupo.classList.add('invalido')
+  }
+}
+
+const validarParcelas = () => {
+  const $parcelas = document.querySelector('.js-form-selecao-parcelas')
+  const $grupo    = $parcelas.closest('.js-form-grupo')
+
+  if ($parcelas.value) {
+    $grupo.classList.remove('invalido')
+  }
+  else {
+    $grupo.classList.add('invalido')
   }
 }

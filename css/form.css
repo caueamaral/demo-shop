@@ -33,6 +33,7 @@
 .form-campo,
 .form-selecao {
   border-bottom: 2px solid var(--cinzaClaro);
+  transition: border-color .5s;
 }
 
 .form-campo {
@@ -58,7 +59,7 @@
   fill: var(--vermelho);
   position: absolute;
   right: -6px;
-  top: -2px;
+  top: -1px;
   width: 30px;
 }
 
@@ -123,7 +124,8 @@
   position: absolute;
 }
 
-.form-grupo.invalido .form-campo {
+.form-grupo.invalido .form-campo,
+.form-grupo.invalido .form-selecao {
   border-color: var(--vermelho);
 }
 
