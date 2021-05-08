@@ -217,7 +217,7 @@ const validarCVV = () => {
   const $cvv   = document.querySelector('.js-form-campo-cvv')
   const $grupo = $cvv.closest('.js-form-grupo')
 
-  if ($cvv.value.length == 3) {
+  if ($cvv.value.length > 2) {
     $grupo.classList.remove('invalido')
   }
   else {
