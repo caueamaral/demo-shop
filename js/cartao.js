@@ -139,20 +139,22 @@ const inserirBarra = valor => {
 const validar = valor => {
   const alvo = event.target.dataset.bind
 
-  if (alvo == 'numero') {
-    validarNumero()
-  }
-  else if (alvo == 'nome') {
-    validarNome()
-  }
-  else if (alvo == 'validade') {
-    validarValidade()
-  }
-  else if (alvo == 'cvv') {
-    validarCVV()
-  }
-  else if (alvo == 'parcelas') {
-    validarParcelas()
+  switch(alvo) {
+    case 'numero':
+      validarNumero()
+    break
+    case 'nome':
+      validarNome()
+    break
+    case 'validade':
+      validarValidade()
+    break
+    case 'cvv':
+      validadeCVV()
+    break
+    case 'parcelas':
+      validadeParcelas()
+    break
   }
 
   function validarNumero() {
