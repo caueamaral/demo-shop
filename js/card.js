@@ -64,12 +64,12 @@
 })()
 
 const formatar = () => {
-  const alvo           = event.target.dataset.bind
+  const target           = event.target.dataset.bind
   const valor          = event.target.value
   const valorSemLetras = removerLetras(valor)
   let novoValor        = ''
 
-  switch(alvo) {
+  switch(target) {
     case 'number':
       novoValor = inserirEspacos(valorSemLetras)
     break
@@ -84,18 +84,18 @@ const formatar = () => {
     break
   }
 
-  if (alvo != 'parcelas') {
+  if (target != 'parcelas') {
     event.target.value = novoValor
   }
 }
 
 const preencher = () => {
-  const alvo    = event.target.dataset.bind
-  const $alvo   = document.querySelector(`.js-card-data-bind-alvo[data-bind=${alvo}]`)
+  const target    = event.target.dataset.bind
+  const $target   = document.querySelector(`.js-card-data-bind-target[data-bind=${target}]`)
   const valor   = event.target.value
   let novoValor = ''
 
-  switch(alvo) {
+  switch(target) {
     case 'number':
       novoValor = inserirEspacos(valor)
     break
@@ -113,18 +113,18 @@ const preencher = () => {
     break
   }
 
-  $alvo.textContent = novoValor
+  $target.textContent = novoValor
 
-  if (!$alvo.textContent) {
+  if (!$target.textContent) {
 
-    if (alvo == 'number') {
-      $alvo.innerHTML = `<span class="card-front-numbers-interno">${$alvo.getAttribute('placeholder')}</span>`
+    if (target == 'number') {
+      $target.innerHTML = `<span class="card-front-numbers-interno">${$target.getAttribute('placeholder')}</span>`
     }
-    else if (alvo == 'cvv') {
-      $alvo.innerHTML = `<span class="card-back-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
+    else if (target == 'cvv') {
+      $target.innerHTML = `<span class="card-back-cvv-interno">${$target.getAttribute('placeholder')}</span>`
     }
     else {
-      $alvo.textContent = $alvo.getAttribute('placeholder')
+      $target.textContent = $target.getAttribute('placeholder')
     }
   }
 }
@@ -164,9 +164,9 @@ const inserirBarra = valor => {
 }
 
 const validar = valor => {
-  const alvo = event.target.dataset.bind
+  const target = event.target.dataset.bind
 
-  switch(alvo) {
+  switch(target) {
     case 'number':
       validarnumber()
     break
