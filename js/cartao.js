@@ -41,34 +41,34 @@
 
 const formatar = () => {
   const alvo           = event.target.dataset.bind
-  const valorSemLetras = removerLetras(event.target.value)
-
-  let valor
+  const valor          = event.target.value
+  const valorSemLetras = removerLetras(valor)
+  let novoValor        = ''
 
   switch(alvo) {
     case 'numero':
-      valor = inserirEspacos(valorSemLetras)
+      novoValor = inserirEspacos(valorSemLetras)
     break
     case 'nome':
-      valor = removerNumeros(event.target.value)
+      novoValor = removerNumeros(valor)
     break
     case 'validade':
-      valor = inserirBarra(valorSemLetras)
+      novoValor = inserirBarra(valorSemLetras)
     break
     case 'cvv':
-      valor = valorSemLetras
+      novoValor = valorSemLetras
     break
   }
 
   if (alvo != 'parcelas') {
-    event.target.value = valor
+    event.target.value = novoValor
   }
 }
 
 const preencher = () => {
   const alvo    = event.target.dataset.bind
   const $alvo   = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
-  let valor     = event.target.value
+  const valor   = event.target.value
   let novoValor = ''
 
   switch(alvo) {
@@ -86,7 +86,9 @@ const preencher = () => {
     break
   }
 
-  $alvo.textContent = novoValor
+  if (alvo != 'parcelas') {
+    $alvo.textContent = novoValor 
+  }
 
   if (alvo != 'parcelas' && !$alvo?.textContent) {
 
