@@ -47,11 +47,20 @@
     })
   }
 
+  const cartaoBandeiras = () => {
+    const $numeros = document.querySelector('.js-form-campo-numero')
+
+    $numeros.addEventListener('input', () => {
+      validarBandeira()
+    })
+  }
+
   cartaoPreencher()
   cartaoAparar()
   cartaoFlip()
   cartaoValidarCampos()
   cartaoValidarEnvio()
+  cartaoBandeiras()
 })()
 
 const formatar = () => {
@@ -235,4 +244,45 @@ const validarParcelas = () => {
   else {
     $grupo.classList.add('invalido')
   }
+}
+
+const validarBandeira = () => {
+  let valor               = event.target.value
+  let bandeiraEncontrada = ''
+
+  if (valor.length < 2) {
+    return bandeiraResetar()
+  }
+  
+  bandeiraTestar('visa',       ['4'])
+  bandeiraTestar('mastercard', ['51', '52', '53', '54', '55'])
+
+  if (bandeiraEncontrada) {
+    bandeiraAtivar(bandeiraEncontrada)
+  }
+
+  function bandeiraTestar(bandeira, numeros) {
+
+    numeros.forEach(numero => {
+
+      if (valor.startsWith(numero)) {
+        return bandeiraEncontrada = bandeira
+      }
+    })
+  }
+}
+
+const bandeiraResetar = () => {
+  const $cartao = document.querySelector('.js-cartao')
+
+  $cartao.classList.remove('visa')
+  $cartao.classList.remove('mastercard')
+}
+
+const bandeiraAtivar = bandeira => {
+  bandeiraResetar()
+
+  const $cartao = document.querySelector('.js-cartao')
+
+  $cartao.classList.add(bandeira)
 }
