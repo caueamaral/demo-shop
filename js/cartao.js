@@ -69,6 +69,7 @@ const preencher = () => {
   const alvo    = event.target.dataset.bind
   const $alvo   = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
   const valor   = event.target.value
+  const vazio   = !$alvo?.textContent
   let novoValor = ''
 
   switch(alvo) {
@@ -84,13 +85,14 @@ const preencher = () => {
     case 'cvv':
       novoValor = valor
     break
+    case 'parcelas':
+      return
+    break
   }
 
-  if (alvo != 'parcelas') {
-    $alvo.textContent = novoValor 
-  }
+  $alvo.textContent = novoValor
 
-  if (alvo != 'parcelas' && !$alvo?.textContent) {
+  if (vazio) {
 
     if (alvo == 'cvv') {
       $alvo.innerHTML = `<span class="cartao-verso-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
