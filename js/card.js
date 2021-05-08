@@ -9,22 +9,22 @@
   }
 
   const cardAparar = () => {
-    const $fieldNome = document.querySelector('.js-card-field-nome')
+    const $fieldName = document.querySelector('.js-card-field-name')
 
-    $fieldNome.addEventListener('blur', () => {
+    $fieldName.addEventListener('blur', () => {
       event.target.value = event.target.value.trim()
     })
   }
 
   const cardFlip = () => {
-    const $card   = document.querySelector('.js-card')
+    const $card     = document.querySelector('.js-card')
     const $fieldCVV = document.querySelector('.js-card-field-cvv')
 
     const flipAtivo   = () => $card.classList.add('flip')
     const flipInativo = () => $card.classList.remove('flip')
 
     $fieldCVV.addEventListener('focus', flipAtivo)
-    $fieldCVV.addEventListener('blur', flipInativo)
+    $fieldCVV.addEventListener('blur',  flipInativo)
   }
 
   const cardValidarfields = () => {
@@ -40,7 +40,7 @@
       event.preventDefault()
   
       validarNumero()
-      validarNome()
+      validarname()
       validarValidade()
       validarCVV()
       validarParcelas()
@@ -73,7 +73,7 @@ const formatar = () => {
     case 'numero':
       novoValor = inserirEspacos(valorSemLetras)
     break
-    case 'nome':
+    case 'name':
       novoValor = removerNumeros(valor)
     break
     case 'validade':
@@ -102,7 +102,7 @@ const preencher = () => {
     case 'validade':
       novoValor = inserirBarra(valor)
     break
-    case 'nome':
+    case 'name':
       novoValor = valor
     break
     case 'cvv':
@@ -170,8 +170,8 @@ const validar = valor => {
     case 'numero':
       validarNumero()
     break
-    case 'nome':
-      validarNome()
+    case 'name':
+      validarname()
     break
     case 'validade':
       validarValidade()
@@ -197,12 +197,12 @@ const validarNumero = () => {
   }
 }
 
-const validarNome = () => {
-  const $nome     = document.querySelector('.js-form-field-nome')
-  const $grupo    = $nome.closest('.js-form-grupo')
+const validarname = () => {
+  const $name     = document.querySelector('.js-form-field-name')
+  const $grupo    = $name.closest('.js-form-grupo')
   const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
 
-  if (expressao.test($nome.value)) {
+  if (expressao.test($name.value)) {
     $grupo.classList.remove('invalido')
   }
   else {

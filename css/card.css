@@ -72,7 +72,7 @@
   word-spacing: 3px;
 }
 
-.card-front-nome,
+.card-front-name,
 .card-front-validade {
   bottom: 30px;
   font-size: 12px;
@@ -80,7 +80,7 @@
   position: absolute;
 }
 
-.card-front-nome {
+.card-front-name {
   left: 15px;
   text-transform: uppercase;
   word-break: break-all;
@@ -132,14 +132,14 @@
     word-spacing: 3px;
   }
 
-  .card-front-nome,
+  .card-front-name,
   .card-front-validade {
     bottom: 36px;
     font-size: 16px;
     line-height: 23px;
   }
 
-  .card-front-nome {
+  .card-front-name {
     left: 26px;
   }
 
