@@ -235,7 +235,7 @@ const validarCVV = () => {
 }
 
 const validarParcelas = () => {
-  const $parcelas = document.querySelector('.js-form-selecao-parcelas')
+  const $parcelas = document.querySelector('.js-form-selection-parcelas')
   const $group    = $parcelas.closest('.js-form-group')
 
   if ($parcelas.value) {
