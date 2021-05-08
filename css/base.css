@@ -36,7 +36,7 @@ html, body {
   justify-content: center;
 }
 
-.pagamento {
+.payment {
   background: var(--branco);
   border: 2px solid var(--cinzaClaro);
   margin: 40px 0;
@@ -57,7 +57,7 @@ html, body {
     justify-content: center;
   }
 
-  .pagamento {
+  .payment {
     display: flex;
     justify-content: space-between;
     width: 1024px;
