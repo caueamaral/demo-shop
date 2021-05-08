@@ -114,8 +114,24 @@
     background-image: url(../img/cartao-frente-computador.png);
   }
 
+  .cartao.visa .cartao-frente {
+    background-image: url(../img/cartao-frente-computador-visa.png);
+  }
+
+  .cartao.mastercard .cartao-frente {
+    background-image: url(../img/cartao-frente-computador-mastercard.png);
+  }
+
   .cartao-verso {
     background-image: url(../img/cartao-verso-computador.png);
+  }
+
+  .cartao.visa .cartao-verso {
+    background-image: url(../img/cartao-verso-computador-visa.png);
+  }
+
+  .cartao.mastercard .cartao-verso {
+    background-image: url(../img/cartao-verso-computador-mastercard.png);
   }
 
   .cartao-frente-numeros {
