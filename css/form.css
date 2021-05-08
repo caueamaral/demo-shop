@@ -36,6 +36,11 @@
   transition: border-color .5s;
 }
 
+.form-grupo.invalido .form-campo,
+.form-grupo.invalido .form-selecao {
+  border-color: var(--vermelho);
+}
+
 .form-campo {
   color: var(--preto);
   display: block;
@@ -119,18 +124,16 @@
 
 .form-mensagem {
   color: var(--vermelho);
-  display: none;
   font-size: 11px;
   position: absolute;
-}
-
-.form-grupo.invalido .form-campo,
-.form-grupo.invalido .form-selecao {
-  border-color: var(--vermelho);
+  transition: opacity .5s;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .form-grupo.invalido .form-mensagem {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
 
