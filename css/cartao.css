@@ -10,6 +10,7 @@
 
 .cartao-frente,
 .cartao-verso {
+  background-size: cover;
   backface-visibility: hidden;
   border-radius: 10px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .4);
@@ -22,13 +23,32 @@
 }
 
 .cartao-frente {
+  background-image: url(../img/cartao-frente.png);
   transform: perspective(600px) rotateY(0);
   z-index: 1;
 }
 
+.cartao.visa .cartao-frente {
+  background-image: url(../img/cartao-frente-visa.png);
+}
+
+.cartao.mastercard .cartao-frente {
+  background-image: url(../img/cartao-frente-mastercard.png);
+}
+
 .cartao-verso {
+  background-image: url(../img/cartao-verso.png);
   transform: perspective(600px) rotateY(180deg) scale(.5);
 }
+
+.cartao.visa .cartao-verso {
+  background-image: url(../img/cartao-verso-visa.png);
+}
+
+.cartao.mastercard .cartao-verso {
+  background-image: url(../img/cartao-verso-mastercard.png);
+}
+
 
 .cartao.flip .cartao-verso {
   transform: perspective(600px) rotateY(0) scale(1);
@@ -90,48 +110,12 @@
 }
 
 
-/* ----- celular ----- */
-@media (max-width:1099px) {
-  .cartao-frente {
-    background-image: url(../img/cartao-frente-celular.png);
-  }
-
-  .cartao-verso {
-    background-image: url(../img/cartao-verso-celular.png);
-  }
-}
-
-
 
 /* ----- computador ----- */
 @media (min-width:1100px) {
   .cartao {
     height: 224px;
     width: 365px;
-  }
-
-  .cartao-frente {
-    background-image: url(../img/cartao-frente-computador.png);
-  }
-
-  .cartao.visa .cartao-frente {
-    background-image: url(../img/cartao-frente-computador-visa.png);
-  }
-
-  .cartao.mastercard .cartao-frente {
-    background-image: url(../img/cartao-frente-computador-mastercard.png);
-  }
-
-  .cartao-verso {
-    background-image: url(../img/cartao-verso-computador.png);
-  }
-
-  .cartao.visa .cartao-verso {
-    background-image: url(../img/cartao-verso-computador-visa.png);
-  }
-
-  .cartao.mastercard .cartao-verso {
-    background-image: url(../img/cartao-verso-computador-mastercard.png);
   }
 
   .cartao-frente-numeros {
