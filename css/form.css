@@ -8,12 +8,12 @@
   position: relative;
 }
 
-.form-validade-e-cvv-linha {
+.form-validity-e-cvv-linha {
   display: flex;
   justify-content: space-between;
 }
 
-.form-validade-group,
+.form-validity-group,
 .form-cvv-group {
   width: calc(50% - 5px);
 }
@@ -22,7 +22,7 @@
   margin-top: 38px;
 }
 
-.form-linha-validade {
+.form-linha-validity {
   margin-top: 35px;
 }
 
@@ -148,7 +148,7 @@
     margin-top: 58px;
   }
 
-  .form-linha-validade {
+  .form-linha-validity {
     margin-top: 55px;
   }
 

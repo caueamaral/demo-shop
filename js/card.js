@@ -41,7 +41,7 @@
   
       validarNumero()
       validarname()
-      validarValidade()
+      validarvalidity()
       validarCVV()
       validarParcelas()
     })
@@ -76,7 +76,7 @@ const formatar = () => {
     case 'name':
       novoValor = removerNumeros(valor)
     break
-    case 'validade':
+    case 'validity':
       novoValor = inserirBarra(valorSemLetras)
     break
     case 'cvv':
@@ -99,7 +99,7 @@ const preencher = () => {
     case 'numero':
       novoValor = inserirEspacos(valor)
     break
-    case 'validade':
+    case 'validity':
       novoValor = inserirBarra(valor)
     break
     case 'name':
@@ -173,8 +173,8 @@ const validar = valor => {
     case 'name':
       validarname()
     break
-    case 'validade':
-      validarValidade()
+    case 'validity':
+      validarvalidity()
     break
     case 'cvv':
       validarCVV()
@@ -210,11 +210,11 @@ const validarname = () => {
   }
 }
 
-const validarValidade = () => {
-  const $validade = document.querySelector('.js-form-field-validade')
-  const $group    = $validade.closest('.js-form-group')
+const validarvalidity = () => {
+  const $validity = document.querySelector('.js-form-field-validity')
+  const $group    = $validity.closest('.js-form-group')
 
-  if ($validade.value.length == 5) {
+  if ($validity.value.length == 5) {
     $group.classList.remove('invalido')
   }
   else {

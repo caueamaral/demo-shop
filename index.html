@@ -37,7 +37,7 @@
                   <span class="card-front-numeros-interno">**** **** **** ****</span>
                 </div>
                 <div class="card-front-name js-card-data-bind-alvo" data-bind="name" placeholder="name do titular">name do titular</div>
-                <div class="card-front-validade js-card-data-bind-alvo" data-bind="validade" placeholder="00/00">00/00</div>
+                <div class="card-front-validity js-card-data-bind-alvo" data-bind="validity" placeholder="00/00">00/00</div>
               </div>
               <div class="card-back">
                 <div class="card-back-cvv js-card-data-bind-alvo" data-bind="cvv" placeholder="***">
@@ -76,14 +76,14 @@
               <div class="form-linha form-linha-name">
                 <div class="form-group js-form-group">
                   <input type="text" class="form-field js-card-data-bind js-card-field-name js-form-field-name" id="form-field-name" data-bind="name" maxlength="26" required>
-                  <label for="form-field-name" class="form-rotulo">nome (igual ao cartão)</label>
+                  <label for="form-field-name" class="form-rotulo">Nome (igual ao cartão)</label>
                   <div class="form-message">Insira seu nome completo</div>
                 </div>
               </div>
-              <div class="form-linha form-linha-validade form-validade-e-cvv-linha">
+              <div class="form-linha form-linha-validity form-validity-e-cvv-linha">
                 <div class="form-group form-cvv-group js-form-group">
-                  <input type="text" class="form-field js-card-data-bind js-form-field-validade" id="form-field-validade" data-bind="validade" maxlength="5" required>
-                  <label for="form-field-validade" class="form-rotulo">Validade</label>
+                  <input type="text" class="form-field js-card-data-bind js-form-field-validity" id="form-field-validity" data-bind="validity" maxlength="5" required>
+                  <label for="form-field-validity" class="form-rotulo">Validade</label>
                   <div class="form-message">Data inválida</div>
                 </div>
                 <div class="form-group form-linha-cvv form-cvv-group js-form-group">
