@@ -187,62 +187,62 @@ const validar = valor => {
 
 const validarNumero = () => {
   const $numero = document.querySelector('.js-form-field-numero')
-  const $grupo  = $numero.closest('.js-form-grupo')
+  const $group  = $numero.closest('.js-form-group')
 
   if ($numero.value.length == 19) {
-    $grupo.classList.remove('invalido')
+    $group.classList.remove('invalido')
   }
   else {
-    $grupo.classList.add('invalido')
+    $group.classList.add('invalido')
   }
 }
 
 const validarname = () => {
   const $name     = document.querySelector('.js-form-field-name')
-  const $grupo    = $name.closest('.js-form-grupo')
+  const $group    = $name.closest('.js-form-group')
   const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
 
   if (expressao.test($name.value)) {
-    $grupo.classList.remove('invalido')
+    $group.classList.remove('invalido')
   }
   else {
-    $grupo.classList.add('invalido')
+    $group.classList.add('invalido')
   }
 }
 
 const validarValidade = () => {
   const $validade = document.querySelector('.js-form-field-validade')
-  const $grupo    = $validade.closest('.js-form-grupo')
+  const $group    = $validade.closest('.js-form-group')
 
   if ($validade.value.length == 5) {
-    $grupo.classList.remove('invalido')
+    $group.classList.remove('invalido')
   }
   else {
-    $grupo.classList.add('invalido')
+    $group.classList.add('invalido')
   }
 }
 
 const validarCVV = () => {
   const $cvv   = document.querySelector('.js-form-field-cvv')
-  const $grupo = $cvv.closest('.js-form-grupo')
+  const $group = $cvv.closest('.js-form-group')
 
   if ($cvv.value.length > 2) {
-    $grupo.classList.remove('invalido')
+    $group.classList.remove('invalido')
   }
   else {
-    $grupo.classList.add('invalido')
+    $group.classList.add('invalido')
   }
 }
 
 const validarParcelas = () => {
   const $parcelas = document.querySelector('.js-form-selecao-parcelas')
-  const $grupo    = $parcelas.closest('.js-form-grupo')
+  const $group    = $parcelas.closest('.js-form-group')
 
   if ($parcelas.value) {
-    $grupo.classList.remove('invalido')
+    $group.classList.remove('invalido')
   }
   else {
-    $grupo.classList.add('invalido')
+    $group.classList.add('invalido')
   }
 }
 

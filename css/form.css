@@ -13,8 +13,8 @@
   justify-content: space-between;
 }
 
-.form-validade-grupo,
-.form-cvv-grupo {
+.form-validade-group,
+.form-cvv-group {
   width: calc(50% - 5px);
 }
 
@@ -36,8 +36,8 @@
   transition: border-color .5s;
 }
 
-.form-grupo.invalido .form-field,
-.form-grupo.invalido .form-selecao {
+.form-group.invalido .form-field,
+.form-group.invalido .form-selecao {
   border-color: var(--vermelho);
 }
 
@@ -131,7 +131,7 @@
   visibility: hidden;
 }
 
-.form-grupo.invalido .form-message {
+.form-group.invalido .form-message {
   opacity: 1;
   visibility: visible;
 }
