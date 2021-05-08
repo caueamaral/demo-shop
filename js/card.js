@@ -121,7 +121,7 @@ const preencher = () => {
       $alvo.innerHTML = `<span class="card-front-numeros-interno">${$alvo.getAttribute('placeholder')}</span>`
     }
     else if (alvo == 'cvv') {
-      $alvo.innerHTML = `<span class="card-verso-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
+      $alvo.innerHTML = `<span class="card-back-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
     }
     else {
       $alvo.textContent = $alvo.getAttribute('placeholder')

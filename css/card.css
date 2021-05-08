@@ -9,7 +9,7 @@
 }
 
 .card-front,
-.card-verso {
+.card-back {
   background-size: cover;
   backface-visibility: hidden;
   border-radius: 10px;
@@ -36,21 +36,21 @@
   background-image: url(../img/card-front-mastercard.png);
 }
 
-.card-verso {
-  background-image: url(../img/card-verso.png);
+.card-back {
+  background-image: url(../img/card-back.png);
   transform: perspective(600px) rotateY(180deg) scale(.5);
 }
 
-.card.visa .card-verso {
-  background-image: url(../img/card-verso-visa.png);
+.card.visa .card-back {
+  background-image: url(../img/card-back-visa.png);
 }
 
-.card.mastercard .card-verso {
-  background-image: url(../img/card-verso-mastercard.png);
+.card.mastercard .card-back {
+  background-image: url(../img/card-back-mastercard.png);
 }
 
 
-.card.flip .card-verso {
+.card.flip .card-back {
   transform: perspective(600px) rotateY(0) scale(1);
 }
 
@@ -91,7 +91,7 @@
   right: 15px;
 }
 
-.card-verso-cvv {
+.card-back-cvv {
   align-items: center;
   color: var(--preto);
   display: flex;
@@ -105,7 +105,7 @@
   width: 45px;
 }
 
-.card-verso-cvv-interno {
+.card-back-cvv-interno {
   margin-top: 4px;
 }
 
@@ -147,7 +147,7 @@
     right: 26px;
   }
 
-  .card-verso-cvv {
+  .card-back-cvv {
     font-size: 15px;
     letter-spacing: 3px;
     left: 168px;
