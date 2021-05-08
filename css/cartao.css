@@ -38,26 +38,18 @@
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.cartao-frente-pattern-numeros,
 .cartao-frente-numeros {
-  line-height: 20px;
-  position: absolute;
-  top: 80px;
-  word-spacing: 2px;
-}
-
-.cartao-frente-pattern-numeros {
-  font-size: 19px;
-  left: 16px;
-  letter-spacing: 4px;
-}
-
-.cartao-frente-numeros {
-  background-repeat: no-repeat;
-  background-position: -15px -80px;
   font-size: 19px;
   left: 15px;
   letter-spacing: 2px;
+  position: absolute;
+  top: 80px;
+  word-spacing: 5px;
+}
+
+.cartao-frente-numeros-interno {
+  letter-spacing: 4px;
+  word-spacing: 3px;
 }
 
 .cartao-frente-nome,
@@ -100,8 +92,7 @@
 
 /* ----- celular ----- */
 @media (max-width:1099px) {
-  .cartao-frente,
-  .cartao-frente-numeros {
+  .cartao-frente {
     background-image: url(../img/cartao-frente-celular.png);
   }
 
@@ -119,8 +110,7 @@
     width: 365px;
   }
 
-  .cartao-frente,
-  .cartao-frente-numeros {
+  .cartao-frente {
     background-image: url(../img/cartao-frente-computador.png);
   }
 
@@ -128,21 +118,17 @@
     background-image: url(../img/cartao-verso-computador.png);
   }
 
-  .cartao-frente-pattern-numeros,
   .cartao-frente-numeros {
     font-size: 24px;
-    line-height: 27px;
+    letter-spacing: 3px;
+    left: 26px;
     top: 105px;
+    word-spacing: 2px;
   }
 
-  .cartao-frente-pattern-numeros {
-    left: 30px;
-    word-spacing: 7px;
-  }
-  .cartao-frente-numeros {
-    background-position: -26px -105px;
-    left: 26px;
-    word-spacing: 5px;
+  .cartao-frente-numeros-interno {
+    letter-spacing: 5px;
+    word-spacing: 3px;
   }
 
   .cartao-frente-nome,
