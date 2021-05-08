@@ -19,12 +19,12 @@
   width: 100%;
 }
 
-.info-steps-voltar {
+.info-steps-back {
   left: 7px;
   position: absolute;
 }
 
-.info-steps-vetor {
+.info-steps-vector {
   fill: var(--branco);
   height: 25px;
 }
@@ -50,7 +50,7 @@
   margin-top: 27px;
 }
 
-.info-titulo-vetor {
+.info-titulo-vector {
   height: 40px;
   margin-right: 11px;
 }
@@ -79,14 +79,14 @@
     font-size: 13px;
   }
 
-  .info-steps-voltar {
+  .info-steps-back {
     left: -4px;
     margin-right: 15px;
     position: relative;
     top: 2px;
   }
 
-  .info-steps-vetor {
+  .info-steps-vector {
     height: 16px;
   }
 
@@ -96,7 +96,7 @@
     margin-top: 49px;
   }
 
-  .info-titulo-vetor {
+  .info-titulo-vector {
     height: 50px;
     margin-right: 14px;
   }

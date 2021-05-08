@@ -60,7 +60,7 @@
   z-index: 1;
 }
 
-.form-selecao-vetor {
+.form-selecao-vector {
   fill: var(--vermelho);
   position: absolute;
   right: -6px;
@@ -106,7 +106,7 @@
   margin-right: 10px;
 }
 
-.form-cvv-vetor {
+.form-cvv-vector {
   bottom: 1px;
   fill: var(--cinza);
   height: 14px;
