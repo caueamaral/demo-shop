@@ -34,11 +34,11 @@
   margin-right: 4px;
 }
 
-.info-steps-texto {
+.info-steps-text {
   display: inline-block;
 }
 
-.info-steps-texto-computador {
+.info-steps-text-computador {
   display: none;
 }
 
@@ -70,11 +70,11 @@
   }
 
   .info-steps-destaque,
-  .info-steps-texto {
+  .info-steps-text {
     display: none;
   }
   
-  .info-steps-texto-computador {
+  .info-steps-text-computador {
     display: block;
     font-size: 13px;
   }

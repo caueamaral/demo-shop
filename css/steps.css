@@ -47,11 +47,11 @@
     width: 100%;
   }
 
-  .steps-grupo-texto {
+  .steps-grupo-text {
     font-size: 13px;
   }
 
-  .steps-grupo:not(:last-of-type) .steps-grupo-texto {
+  .steps-grupo:not(:last-of-type) .steps-grupo-text {
     margin-right: 17px;
   }
 
