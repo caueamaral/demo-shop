@@ -1,5 +1,5 @@
-/* ----- etapas ----- */
-.etapas {
+/* ----- steps ----- */
+.steps {
   display: none;
 }
 
@@ -7,23 +7,23 @@
 
 /* ----- computador ----- */
 @media (min-width:1100px) {
-  .etapas {
+  .steps {
     color: var(--vermelho);
     display: flex;
     justify-content: flex-end;
   }
 
-  .etapas-grupo {
+  .steps-grupo {
     align-items: center;
     display: flex;
     position: relative;
   }
 
-  .etapas-grupo:not(:last-child) {
+  .steps-grupo:not(:last-child) {
     margin-right: 18px;
   }
 
-  .etapas-grupo-numero {
+  .steps-grupo-numero {
     border: 1px solid;
     border-radius: 50%;
     display: inline-block;
@@ -36,8 +36,8 @@
     width: 22px;
   }
 
-  .etapas-grupo-numero.ativo::after {
-    background: var(--vermelho) url(../img/etapas-grupo-numero-ativo.svg) no-repeat center / 13px auto;
+  .steps-grupo-numero.ativo::after {
+    background: var(--vermelho) url(../img/steps-grupo-numero-ativo.svg) no-repeat center / 13px auto;
     border-radius: 50%;
     content: '';
     left: 0;
@@ -47,15 +47,15 @@
     width: 100%;
   }
 
-  .etapas-grupo-texto {
+  .steps-grupo-texto {
     font-size: 13px;
   }
 
-  .etapas-grupo:not(:last-of-type) .etapas-grupo-texto {
+  .steps-grupo:not(:last-of-type) .steps-grupo-texto {
     margin-right: 17px;
   }
 
-  .etapas-grupo-vetor {
+  .steps-grupo-vetor {
     fill: var(--vermelho);
     height: 20px;
     width: 20px;
