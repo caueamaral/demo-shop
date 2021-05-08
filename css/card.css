@@ -58,7 +58,7 @@
   transform: perspective(600px) rotateY(-180deg);
 }
 
-.card-front-numeros {
+.card-front-numbers {
   font-size: 19px;
   left: 15px;
   letter-spacing: 2px;
@@ -67,7 +67,7 @@
   word-spacing: 5px;
 }
 
-.card-front-numeros-interno {
+.card-front-numbers-interno {
   letter-spacing: 4px;
   word-spacing: 3px;
 }
@@ -119,7 +119,7 @@
     width: 365px;
   }
 
-  .card-front-numeros {
+  .card-front-numbers {
     font-size: 24px;
     letter-spacing: 3px;
     left: 26px;
@@ -127,7 +127,7 @@
     word-spacing: 2px;
   }
 
-  .card-front-numeros-interno {
+  .card-front-numbers-interno {
     letter-spacing: 5px;
     word-spacing: 3px;
   }

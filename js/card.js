@@ -39,7 +39,7 @@
     $botao.addEventListener('click', () => {
       event.preventDefault()
   
-      validarNumero()
+      validarnumber()
       validarname()
       validarvalidity()
       validarCVV()
@@ -48,9 +48,9 @@
   }
 
   const cardBandeiras = () => {
-    const $numeros = document.querySelector('.js-form-field-numero')
+    const $numbers = document.querySelector('.js-form-field-number')
 
-    $numeros.addEventListener('input', () => {
+    $numbers.addEventListener('input', () => {
       validarBandeira()
     })
   }
@@ -70,11 +70,11 @@ const formatar = () => {
   let novoValor        = ''
 
   switch(alvo) {
-    case 'numero':
+    case 'number':
       novoValor = inserirEspacos(valorSemLetras)
     break
     case 'name':
-      novoValor = removerNumeros(valor)
+      novoValor = removernumbers(valor)
     break
     case 'validity':
       novoValor = inserirBarra(valorSemLetras)
@@ -96,7 +96,7 @@ const preencher = () => {
   let novoValor = ''
 
   switch(alvo) {
-    case 'numero':
+    case 'number':
       novoValor = inserirEspacos(valor)
     break
     case 'validity':
@@ -117,8 +117,8 @@ const preencher = () => {
 
   if (!$alvo.textContent) {
 
-    if (alvo == 'numero') {
-      $alvo.innerHTML = `<span class="card-front-numeros-interno">${$alvo.getAttribute('placeholder')}</span>`
+    if (alvo == 'number') {
+      $alvo.innerHTML = `<span class="card-front-numbers-interno">${$alvo.getAttribute('placeholder')}</span>`
     }
     else if (alvo == 'cvv') {
       $alvo.innerHTML = `<span class="card-back-cvv-interno">${$alvo.getAttribute('placeholder')}</span>`
@@ -144,7 +144,7 @@ const removerLetras = valor => {
   return novoValor
 }
 
-const removerNumeros = valor => {
+const removernumbers = valor => {
   let novoValor = valor.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ').trimStart()
 
   return novoValor
@@ -167,8 +167,8 @@ const validar = valor => {
   const alvo = event.target.dataset.bind
 
   switch(alvo) {
-    case 'numero':
-      validarNumero()
+    case 'number':
+      validarnumber()
     break
     case 'name':
       validarname()
@@ -185,11 +185,11 @@ const validar = valor => {
   }
 }
 
-const validarNumero = () => {
-  const $numero = document.querySelector('.js-form-field-numero')
-  const $group  = $numero.closest('.js-form-group')
+const validarnumber = () => {
+  const $number = document.querySelector('.js-form-field-number')
+  const $group  = $number.closest('.js-form-group')
 
-  if ($numero.value.length == 19) {
+  if ($number.value.length == 19) {
     $group.classList.remove('invalido')
   }
   else {
@@ -261,11 +261,11 @@ const validarBandeira = () => {
     bandeiraAtivar(bandeiraEncontrada)
   }
 
-  function bandeiraTestar(bandeira, numeros) {
+  function bandeiraTestar(bandeira, numbers) {
 
-    numeros.forEach(numero => {
+    numbers.forEach(number => {
 
-      if (valor.startsWith(numero)) {
+      if (valor.startsWith(number)) {
         return bandeiraEncontrada = bandeira
       }
     })
