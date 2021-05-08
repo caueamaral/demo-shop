@@ -66,19 +66,27 @@ const formatar = () => {
 }
 
 const preencher = () => {
-  const alvo  = event.target.dataset.bind
-  const $alvo = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
-  let valor   = event.target.value
+  const alvo    = event.target.dataset.bind
+  const $alvo   = document.querySelector(`.js-cartao-data-bind-alvo[data-bind=${alvo}]`)
+  let valor     = event.target.value
+  let novoValor = ''
 
-  if (alvo == 'numero') {
-    $alvo.textContent = inserirEspacos(valor)
+  switch(alvo) {
+    case 'numero':
+      novoValor = inserirEspacos(valor)
+    break
+    case 'validade':
+      novoValor = inserirBarra(valor)
+    break
+    case 'nome':
+      novoValor = valor
+    break
+    case 'cvv':
+      novoValor = valor
+    break
   }
-  else if (alvo == 'validade') {
-    $alvo.textContent = inserirBarra(valor)
-  }
-  else if (alvo == 'nome' || alvo == 'cvv') {
-    $alvo.textContent = valor
-  }
+
+  $alvo.textContent = novoValor
 
   if (alvo != 'parcelas' && !$alvo?.textContent) {
 
