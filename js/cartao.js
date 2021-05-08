@@ -118,7 +118,7 @@ const removerLetras = valor => {
 }
 
 const removerNumeros = valor => {
-  let novoValor = valor.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ')
+  let novoValor = valor.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ').trimStart()
 
   return novoValor
 }
@@ -169,9 +169,11 @@ const validar = valor => {
   }
 
   function validarNome() {
-    const $grupo = event.target.closest('.js-form-grupo')
+    const $grupo    = event.target.closest('.js-form-grupo')
+    const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
+    const valor     = event.target.value
 
-    if (event.target.value.length > 4 && event.target.value.includes(' ')) {
+    if (expressao.test(valor)) {
       $grupo.classList.remove('invalido')
     }
     else {
