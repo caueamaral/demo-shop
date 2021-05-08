@@ -67,7 +67,7 @@
   word-spacing: 5px;
 }
 
-.card-front-numbers-interno {
+.card-front-numbers-inner {
   letter-spacing: 4px;
   word-spacing: 3px;
 }
@@ -105,7 +105,7 @@
   width: 45px;
 }
 
-.card-back-cvv-interno {
+.card-back-cvv-inner {
   margin-top: 4px;
 }
 
@@ -127,7 +127,7 @@
     word-spacing: 2px;
   }
 
-  .card-front-numbers-interno {
+  .card-front-numbers-inner {
     letter-spacing: 5px;
     word-spacing: 3px;
   }

@@ -42,7 +42,7 @@
   display: none;
 }
 
-.info-titulo {
+.info-title {
   display: flex;
   font-size: 16px;
   font-weight: bold;
@@ -50,7 +50,7 @@
   margin-top: 27px;
 }
 
-.info-titulo-vector {
+.info-title-vector {
   height: 40px;
   margin-right: 11px;
 }
@@ -90,13 +90,13 @@
     height: 16px;
   }
 
-  .info-titulo {
+  .info-title {
     font-size: 20px;
     line-height: 24px;
     margin-top: 49px;
   }
 
-  .info-titulo-vector {
+  .info-title-vector {
     height: 50px;
     margin-right: 14px;
   }
