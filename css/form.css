@@ -68,7 +68,7 @@
   width: 30px;
 }
 
-.form-rotulo {
+.form-label {
   bottom: 4px;
   color: var(--cinza);
   cursor: pointer;
@@ -92,7 +92,7 @@
   -webkit-font-smoothing: initial;
 }
 
-.form-cvv-rotulo {
+.form-cvv-label {
   align-items: center;
   display: flex;
   width: inherit;
@@ -114,10 +114,10 @@
   width: 14px;
 }
 
-.form-field:focus + .form-rotulo,
-.form-field:valid + .form-rotulo,
-.form-selection:active + .form-rotulo,
-.form-selection:valid + .form-rotulo {
+.form-field:focus + .form-label,
+.form-field:valid + .form-label,
+.form-selection:active + .form-label,
+.form-selection:valid + .form-label {
   bottom: 28px;
   font-size: 13px;
 }
