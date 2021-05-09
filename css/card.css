@@ -93,7 +93,7 @@
 
 .card-back-cvv {
   align-items: center;
-  color: var(--preto);
+  color: var(--black);
   display: flex;
   font-size: 12px;
   letter-spacing: 2px;

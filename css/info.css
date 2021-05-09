@@ -1,8 +1,8 @@
 /* ----- info ----- */
 .info {
   align-items: center;
-  background: linear-gradient(to bottom,var(--vermelho), var(--vermelho)) no-repeat 0 0 / 100% 240px;
-  color: var(--branco);
+  background: linear-gradient(to bottom,var(--red), var(--red)) no-repeat 0 0 / 100% 240px;
+  color: var(--white);
   display: flex;
   flex-direction: column;
   padding-top: 34px;
@@ -25,7 +25,7 @@
 }
 
 .info-steps-vector {
-  fill: var(--branco);
+  fill: var(--white);
   height: 25px;
 }
 

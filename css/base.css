@@ -1,11 +1,11 @@
 /* ----- colors ----- */
 :root {
-  --branco: #fff;
-  --preto: #3c3c3c;
-  --cinza: #c9c9c9;
-  --cinzaClaro: #efefef;
-  --cinzaFundo: #f7f7f7;
-  --vermelho: #de4b4b;
+  --white: #fff;
+  --black: #3c3c3c;
+  --gray: #c9c9c9;
+  --lightGray: #efefef;
+  --backgroundGray: #f7f7f7;
+  --red: #de4b4b;
 }
 
 
@@ -27,7 +27,7 @@ html, body {
 }
 
 .container {
-  background: var(--cinzaFundo);
+  background: var(--backgroundGray);
   min-height: 100vh;
 }
 
@@ -37,8 +37,8 @@ html, body {
 }
 
 .payment {
-  background: var(--branco);
-  border: 2px solid var(--cinzaClaro);
+  background: var(--white);
+  border: 2px solid var(--lightGray);
   margin: 40px 0;
   width: 360px;
 }

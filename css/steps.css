@@ -8,7 +8,7 @@
 /* ----- computer ----- */
 @media (min-width:1100px) {
   .steps {
-    color: var(--vermelho);
+    color: var(--red);
     display: flex;
     justify-content: flex-end;
   }
@@ -37,7 +37,7 @@
   }
 
   .steps-group-number.active::after {
-    background: var(--vermelho) url(../img/steps-group-number-active.svg) no-repeat center / 13px auto;
+    background: var(--red) url(../img/steps-group-number-active.svg) no-repeat center / 13px auto;
     border-radius: 50%;
     content: '';
     left: 0;
@@ -56,7 +56,7 @@
   }
 
   .steps-group-vector {
-    fill: var(--vermelho);
+    fill: var(--red);
     height: 20px;
     width: 20px;
   }

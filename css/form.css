@@ -32,17 +32,17 @@
 
 .form-field,
 .form-selection {
-  border-bottom: 2px solid var(--cinzaClaro);
+  border-bottom: 2px solid var(--lightGray);
   transition: border-color .5s;
 }
 
 .form-group.invalido .form-field,
 .form-group.invalido .form-selection {
-  border-color: var(--vermelho);
+  border-color: var(--red);
 }
 
 .form-field {
-  color: var(--preto);
+  color: var(--black);
   display: block;
   margin-top: 3px;
   padding: 3px 0;
@@ -61,7 +61,7 @@
 }
 
 .form-selection-vector {
-  fill: var(--vermelho);
+  fill: var(--red);
   position: absolute;
   right: -6px;
   top: -1px;
@@ -70,7 +70,7 @@
 
 .form-label {
   bottom: 4px;
-  color: var(--cinza);
+  color: var(--gray);
   cursor: pointer;
   display: block;
   position: absolute;
@@ -79,10 +79,10 @@
 }
 
 .form-button {
-  background: var(--vermelho);
+  background: var(--red);
   border: none;
   border-radius: 10px;
-  color: var(--branco);
+  color: var(--white);
   cursor: pointer;
   letter-spacing: .2px;
   margin-top: 45px;
@@ -108,7 +108,7 @@
 
 .form-cvv-vector {
   bottom: 1px;
-  fill: var(--cinza);
+  fill: var(--gray);
   height: 14px;
   position: relative;
   width: 14px;
@@ -123,7 +123,7 @@
 }
 
 .form-message {
-  color: var(--vermelho);
+  color: var(--red);
   font-size: 11px;
   position: absolute;
   transition: opacity .5s;
