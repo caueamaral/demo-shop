@@ -43,7 +43,7 @@ html, body {
   width: 360px;
 }
 
-.dados {
+.data {
   margin: 38px;
 }
 
@@ -63,7 +63,7 @@ html, body {
     width: 1024px;
   }
 
-  .dados {
+  .data {
     margin: 48px 63px 48px 0;
     width: 440px;
   }
