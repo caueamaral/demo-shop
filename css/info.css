@@ -29,7 +29,7 @@
   height: 25px;
 }
 
-.info-steps-destaque {
+.info-steps-highlight {
   font-weight: bold;
   margin-right: 4px;
 }
@@ -69,7 +69,7 @@
     justify-content: flex-start;
   }
 
-  .info-steps-destaque,
+  .info-steps-highlight,
   .info-steps-text {
     display: none;
   }
