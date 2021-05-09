@@ -36,8 +36,8 @@
     width: 22px;
   }
 
-  .steps-group-number.ativo::after {
-    background: var(--vermelho) url(../img/steps-group-number-ativo.svg) no-repeat center / 13px auto;
+  .steps-group-number.active::after {
+    background: var(--vermelho) url(../img/steps-group-number-active.svg) no-repeat center / 13px auto;
     border-radius: 50%;
     content: '';
     left: 0;

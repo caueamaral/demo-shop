@@ -20,11 +20,11 @@
     const $card     = document.querySelector('.js-card')
     const $fieldCVV = document.querySelector('.js-card-field-cvv')
 
-    const flipAtivo   = () => $card.classList.add('flip')
-    const flipInativo = () => $card.classList.remove('flip')
+    const flipActive   = () => $card.classList.add('flip')
+    const flipInactive = () => $card.classList.remove('flip')
 
-    $fieldCVV.addEventListener('focus', flipAtivo)
-    $fieldCVV.addEventListener('blur',  flipInativo)
+    $fieldCVV.addEventListener('focus', flipActive)
+    $fieldCVV.addEventListener('blur',  flipInactive)
   }
 
   const cardValidarfields = () => {
