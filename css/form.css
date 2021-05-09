@@ -36,8 +36,8 @@
   transition: border-color .5s;
 }
 
-.form-group.invalido .form-field,
-.form-group.invalido .form-selection {
+.form-group.invalid .form-field,
+.form-group.invalid .form-selection {
   border-color: var(--red);
 }
 
@@ -131,7 +131,7 @@
   visibility: hidden;
 }
 
-.form-group.invalido .form-message {
+.form-group.invalid .form-message {
   opacity: 1;
   visibility: visible;
 }

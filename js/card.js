@@ -1,14 +1,14 @@
 ;(() => {
-  const cardPreencher = () => {
+  const fillCard = () => {
     const $fields = document.querySelectorAll('.js-card-data-bind')
 
     $fields.forEach($field => {
-      $field.addEventListener('input', () => formatar(event))
-      $field.addEventListener('input', () => preencher(event))
+      $field.addEventListener('input', () => format(event))
+      $field.addEventListener('input', () => fill(event))
     })
   }
 
-  const cardAparar = () => {
+  const trimCard = () => {
     const $fieldName = document.querySelector('.js-card-field-name')
 
     $fieldName.addEventListener('blur', () => {
@@ -16,104 +16,104 @@
     })
   }
 
-  const cardFlip = () => {
+  const flipCard = () => {
     const $card     = document.querySelector('.js-card')
     const $fieldCVV = document.querySelector('.js-card-field-cvv')
 
-    const flipActive   = () => $card.classList.add('flip')
-    const flipInactive = () => $card.classList.remove('flip')
+    const activeFlip   = () => $card.classList.add('flip')
+    const InactiveFlip = () => $card.classList.remove('flip')
 
-    $fieldCVV.addEventListener('focus', flipActive)
-    $fieldCVV.addEventListener('blur',  flipInactive)
+    $fieldCVV.addEventListener('focus', activeFlip)
+    $fieldCVV.addEventListener('blur',  InactiveFlip)
   }
 
-  const cardValidarfields = () => {
+  const validatorCardFields = () => {
     const $fields = document.querySelectorAll('.js-card-data-bind')
 
-    $fields.forEach($field => $field.addEventListener('input', () => validar(event)))
+    $fields.forEach($field => $field.addEventListener('input', () => validator(event)))
   }
 
-  const cardValidarEnvio = () => {
+  const validatorCardSend = () => {
     const $button = document.querySelector('.js-form-button')
 
     $button.addEventListener('click', () => {
       event.preventDefault()
   
-      validarnumber()
-      validarname()
-      validarvalidity()
-      validarCVV()
-      validarinstallments()
+      numberValidator()
+      nameValidator()
+      validityValidator()
+      CVVValidator()
+      installmentsValidator()
     })
   }
 
-  const cardBandeiras = () => {
+  const flagsCard = () => {
     const $numbers = document.querySelector('.js-form-field-number')
 
     $numbers.addEventListener('input', () => {
-      validarBandeira()
+      flagValidation()
     })
   }
 
-  cardPreencher()
-  cardAparar()
-  cardFlip()
-  cardValidarfields()
-  cardValidarEnvio()
-  cardBandeiras()
+  fillCard()
+  trimCard()
+  flipCard()
+  validatorCardFields()
+  validatorCardSend()
+  flagsCard()
 })()
 
-const formatar = () => {
-  const target           = event.target.dataset.bind
-  const valor          = event.target.value
-  const valorSemLetras = removerLetras(valor)
-  let novoValor        = ''
+const format = () => {
+  const target              = event.target.dataset.bind
+  const value               = event.target.value
+  const valueWithoutLetters = removeLetters(value)
+  let newValue              = ''
 
   switch(target) {
     case 'number':
-      novoValor = inserirEspacos(valorSemLetras)
+      newValue = spacesInsertion(valueWithoutLetters)
     break
     case 'name':
-      novoValor = removernumbers(valor)
+      newValue = removeNumbers(value)
     break
     case 'validity':
-      novoValor = inserirBarra(valorSemLetras)
+      newValue = barInsertion(valueWithoutLetters)
     break
     case 'cvv':
-      novoValor = valorSemLetras
+      newValue = valueWithoutLetters
     break
   }
 
   if (target != 'installments') {
-    event.target.value = novoValor
+    event.target.value = newValue
   }
 }
 
-const preencher = () => {
-  const target    = event.target.dataset.bind
-  const $target   = document.querySelector(`.js-card-data-bind-target[data-bind=${target}]`)
-  const valor   = event.target.value
-  let novoValor = ''
+const fill = () => {
+  const target  = event.target.dataset.bind
+  const $target = document.querySelector(`.js-card-data-bind-target[data-bind=${target}]`)
+  const value   = event.target.value
+  let newValue  = ''
 
   switch(target) {
     case 'number':
-      novoValor = inserirEspacos(valor)
+      newValue = spacesInsertion(value)
     break
     case 'validity':
-      novoValor = inserirBarra(valor)
+      newValue = barInsertion(value)
     break
     case 'name':
-      novoValor = valor
+      newValue = value
     break
     case 'cvv':
-      novoValor = valor
+      newValue = value
     break
     case 'installments':
       return
     break
   }
 
-  $target.textContent = novoValor
+  $target.textContent = newValue
 
   if (!$target.textContent) {
 
@@ -129,160 +129,160 @@ const preencher = () => {
   }
 }
 
-const inserirEspacos = valor => {
-  let novoValor = valor
+const spacesInsertion = value => {
+  let newValue = value
     .replace(/\s/g, '')
     .replace(/(.{4})/g, '$1 ')
     .trim()
 
-  return novoValor
+  return newValue
 }
 
-const removerLetras = valor => {
-  let novoValor = valor.replace(/\D/g, '')
+const removeLetters = value => {
+  let newValue = value.replace(/\D/g, '')
 
-  return novoValor
+  return newValue
 }
 
-const removernumbers = valor => {
-  let novoValor = valor.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ').trimStart()
+const removeNumbers = value => {
+  let newValue = value.replace(/[^a-zA-Z\s]/g, '').replace('  ', ' ').trimStart()
 
-  return novoValor
+  return newValue
 }
 
-const inserirBarra = valor => {
-  let novoValor = valor.trim()
+const barInsertion = value => {
+  let newValue = value.trim()
 
-  if (!novoValor.includes('/') && novoValor.length > 2) {
-    novoValor = novoValor.replace(/(\d{2})/, '$1/')
+  if (!newValue.includes('/') && newValue.length > 2) {
+    newValue = newValue.replace(/(\d{2})/, '$1/')
   }
-  else if (novoValor.includes('/') && novoValor.length == 3) {
-    novoValor = novoValor.replace(/\//, '')
+  else if (newValue.includes('/') && newValue.length == 3) {
+    newValue = newValue.replace(/\//, '')
   }
 
-  return novoValor
+  return newValue
 }
 
-const validar = valor => {
+const validator = value => {
   const target = event.target.dataset.bind
 
   switch(target) {
     case 'number':
-      validarnumber()
+      numberValidator()
     break
     case 'name':
-      validarname()
+      nameValidator()
     break
     case 'validity':
-      validarvalidity()
+      validityValidator()
     break
     case 'cvv':
-      validarCVV()
+      CVVValidator()
     break
     case 'installments':
-      validarinstallments()
+      installmentsValidator()
     break
   }
 }
 
-const validarnumber = () => {
+const numberValidator = () => {
   const $number = document.querySelector('.js-form-field-number')
   const $group  = $number.closest('.js-form-group')
 
   if ($number.value.length == 19) {
-    $group.classList.remove('invalido')
+    $group.classList.remove('invalid')
   }
   else {
-    $group.classList.add('invalido')
+    $group.classList.add('invalid')
   }
 }
 
-const validarname = () => {
-  const $name     = document.querySelector('.js-form-field-name')
-  const $group    = $name.closest('.js-form-group')
-  const expressao = /^[a-zA-z]+ [a-zA-Z]+$/
+const nameValidator = () => {
+  const $name      = document.querySelector('.js-form-field-name')
+  const $group     = $name.closest('.js-form-group')
+  const expression = /^[a-zA-z]+ [a-zA-Z]+$/
 
-  if (expressao.test($name.value)) {
-    $group.classList.remove('invalido')
+  if (expression.test($name.value)) {
+    $group.classList.remove('invalid')
   }
   else {
-    $group.classList.add('invalido')
+    $group.classList.add('invalid')
   }
 }
 
-const validarvalidity = () => {
+const validityValidator = () => {
   const $validity = document.querySelector('.js-form-field-validity')
   const $group    = $validity.closest('.js-form-group')
 
   if ($validity.value.length == 5) {
-    $group.classList.remove('invalido')
+    $group.classList.remove('invalid')
   }
   else {
-    $group.classList.add('invalido')
+    $group.classList.add('invalid')
   }
 }
 
-const validarCVV = () => {
+const CVVValidator = () => {
   const $cvv   = document.querySelector('.js-form-field-cvv')
   const $group = $cvv.closest('.js-form-group')
 
   if ($cvv.value.length > 2) {
-    $group.classList.remove('invalido')
+    $group.classList.remove('invalid')
   }
   else {
-    $group.classList.add('invalido')
+    $group.classList.add('invalid')
   }
 }
 
-const validarinstallments = () => {
+const installmentsValidator = () => {
   const $installments = document.querySelector('.js-form-selection-installments')
-  const $group    = $installments.closest('.js-form-group')
+  const $group        = $installments.closest('.js-form-group')
 
   if ($installments.value) {
-    $group.classList.remove('invalido')
+    $group.classList.remove('invalid')
   }
   else {
-    $group.classList.add('invalido')
+    $group.classList.add('invalid')
   }
 }
 
-const validarBandeira = () => {
-  let valor               = event.target.value
-  let bandeiraEncontrada = ''
+const flagValidation = () => {
+  let value     = event.target.value
+  let foundFlag = ''
 
-  if (valor.length < 2) {
-    return bandeiraResetar()
+  if (value.length < 2) {
+    return resetFlag()
   }
   
-  bandeiraTestar('visa',       ['4'])
-  bandeiraTestar('mastercard', ['51', '52', '53', '54', '55'])
+  testFlag('visa',       ['4'])
+  testFlag('mastercard', ['51', '52', '53', '54', '55'])
 
-  if (bandeiraEncontrada) {
-    bandeiraAtivar(bandeiraEncontrada)
+  if (foundFlag) {
+    activeFlag(foundFlag)
   }
 
-  function bandeiraTestar(bandeira, numbers) {
+  function testFlag(flag, numbers) {
 
     numbers.forEach(number => {
 
-      if (valor.startsWith(number)) {
-        return bandeiraEncontrada = bandeira
+      if (value.startsWith(number)) {
+        return foundFlag = flag
       }
     })
   }
 }
 
-const bandeiraResetar = () => {
+const resetFlag = () => {
   const $card = document.querySelector('.js-card')
 
   $card.classList.remove('visa')
   $card.classList.remove('mastercard')
 }
 
-const bandeiraAtivar = bandeira => {
-  bandeiraResetar()
+const activeFlag = flag => {
+  resetFlag()
 
   const $card = document.querySelector('.js-card')
 
-  $card.classList.add(bandeira)
+  $card.classList.add(flag)
 }
