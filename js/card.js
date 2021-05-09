@@ -34,16 +34,16 @@
   }
 
   const cardValidarEnvio = () => {
-    const $botao = document.querySelector('.js-form-botao')
+    const $button = document.querySelector('.js-form-button')
 
-    $botao.addEventListener('click', () => {
+    $button.addEventListener('click', () => {
       event.preventDefault()
   
       validarnumber()
       validarname()
       validarvalidity()
       validarCVV()
-      validarParcelas()
+      validarinstallments()
     })
   }
 
@@ -84,7 +84,7 @@ const formatar = () => {
     break
   }
 
-  if (target != 'parcelas') {
+  if (target != 'installments') {
     event.target.value = novoValor
   }
 }
@@ -108,7 +108,7 @@ const preencher = () => {
     case 'cvv':
       novoValor = valor
     break
-    case 'parcelas':
+    case 'installments':
       return
     break
   }
@@ -179,8 +179,8 @@ const validar = valor => {
     case 'cvv':
       validarCVV()
     break
-    case 'parcelas':
-      validarParcelas()
+    case 'installments':
+      validarinstallments()
     break
   }
 }
@@ -234,11 +234,11 @@ const validarCVV = () => {
   }
 }
 
-const validarParcelas = () => {
-  const $parcelas = document.querySelector('.js-form-selection-parcelas')
-  const $group    = $parcelas.closest('.js-form-group')
+const validarinstallments = () => {
+  const $installments = document.querySelector('.js-form-selection-installments')
+  const $group    = $installments.closest('.js-form-group')
 
-  if ($parcelas.value) {
+  if ($installments.value) {
     $group.classList.remove('invalido')
   }
   else {
