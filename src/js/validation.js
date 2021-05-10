@@ -44,7 +44,7 @@ export function numberValidator() {
 export function nameValidator() {
   const $name      = document.querySelector('.js-form-field-name')
   const $group     = $name.closest('.js-form-group')
-  const expression = /^[a-zA-z]+ [a-zA-Z]+$/
+  const expression = /^[a-zA-z]{2,} [a-zA-Z]{2,}$/
 
   if (expression.test($name.value)) {
     $group.classList.remove('invalid')
