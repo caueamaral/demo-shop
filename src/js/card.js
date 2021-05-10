@@ -1,7 +1,4 @@
-import { spacesInsertion } from './format.js'
-import { removeLetters   } from './format.js'
-import { removeNumbers   } from './format.js'
-import { barInsertion    } from './format.js'
+import { spacesInsertion, removeLetters, removeNumbers, barInsertion } from './format.js'
 
 export function fillCard() {
   const $fields = document.querySelectorAll('.js-card-data-bind')

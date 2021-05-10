@@ -1,5 +1,4 @@
-import { resetFlag  } from './format.js'
-import { activeFlag } from './format.js'
+import { resetFlag, activeFlag  } from './format.js'
 
 export function validatorCardFields() {
   const $fields = document.querySelectorAll('.js-card-data-bind')
