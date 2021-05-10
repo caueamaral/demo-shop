@@ -2,12 +2,12 @@
 Etapa de pagamento utilizando cartão de crédito com validação dos campos.
 
 ### Tecnologias
-- HTML5
-- CSS3
+- HTML5 (semântico)
+- CSS3 (flexbox)
 - JavaScript (ES6)
 - Design responsivo (mobile first)
-- Webpack
-- Babel
+- Webpack (babel)
+- Testes automatizados (Jest)
 
 ### Visualizar
 
@@ -25,8 +25,10 @@ npm run dev
 
 3 - Acesse http://localhost:3000 para visualizar o projeto.
 
-4 - Caso faça alterações compile com:
+### Testes automatizados
+
+Cobertura nas funções de formatação usando Jest
 
 ```sh
-npm run build
+npm run test
 ```
