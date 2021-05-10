@@ -1,4 +1,4 @@
-import { spacesInsertion, removeLetters, removeNumbers, barInsertion } from './format'
+import { spacesInsertion, removeLetters, removeNumbers, barInsertion, resetFlag } from './format'
 
 test('insert spaces between every 4 numbers', () => {
   expect(spacesInsertion('1234123412341234')).toBe('1234 1234 1234 1234')
@@ -14,4 +14,14 @@ test('remove all numbers', () => {
 
 test('insert bar after 2 numbers and allows up to 4 numbers', () => {
   expect(barInsertion('1234')).toBe('12/34')
+})
+
+test('remove visa and mastercard flags', () => {
+  document.body.innerHTML = '<div class="card visa js-card">'
+  resetFlag()
+  expect(document.querySelector('.js-card').classList.contains('visa')).toBeFalsy()
+
+  document.body.innerHTML = '<div class="card mastercard js-card">'
+  resetFlag()
+  expect(document.querySelector('.js-card').classList.contains('mastercard')).toBeFalsy()
 })
